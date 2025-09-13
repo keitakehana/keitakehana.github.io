@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>News - Researcher Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <meta name="color-scheme" content="light dark" />
+  <style>@media print{ .no-print{ display:none !important; } }</style>
+</head>
+<body class="bg-gray-50 text-gray-800 dark:bg-neutral-900 dark:text-neutral-100">
+  <header class="bg-white dark:bg-neutral-900 border-b border-gray-200 dark:border-neutral-800 sticky top-0 z-50">
+  <div class="max-w-5xl mx-auto px-4">
+    <div class="h-14 flex items-center justify-between">
+      <a href="index.html" class="font-bold">Keisuke Takehana</a>
+
+
+      <nav class="hidden sm:flex gap-4 text-sm">
+        <a href="index.html" class="hover:opacity-80">Home</a> 
+        <a href="news.html" class="hover:opacity-80 text-blue-600 font-semibold">News</a> 
+        <a href="about.html" class="hover:opacity-80">About Me</a> 
+        <a href="publications.html" class="hover:opacity-80">Publications</a> 
+        <a href="projects.html" class="hover:opacity-80">Projects</a> 
+        <a href="talks.html" class="hover:opacity-80">Talks</a> 
+        <a href="media.html" class="hover:opacity-80">Media</a> 
+        <a href="contact.html" class="hover:opacity-80">Contact</a></nav>
+      
+      <div class="flex items-center gap-2">
+        <a href="news_en.html" class="text-xs px-2 py-1 rounded border border-gray-300 dark:border-neutral-700 hover:bg-gray-50 dark:hover:bg-neutral-800">English</a>
+        <button id="menuBtn" class="sm:hidden inline-flex items-center justify-center w-10 h-10 rounded-md border border-gray-300 dark:border-neutral-700" aria-expanded="false" aria-controls="mobileNav" aria-label="メニュー">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <nav id="mobileNav" class="sm:hidden hidden flex-col gap-2 pb-3 text-sm" role="menu">
+      <a href="index.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">Home</a> 
+      <a href="news.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800 bg-gray-100 dark:bg-neutral-800 font-semibold">News</a> 
+      <a href="about.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">About Me</a> 
+      <a href="publications.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">Publications</a> 
+      <a href="projects.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">Projects</a> 
+      <a href="talks.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">Talks</a> 
+      <a href="media.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">Media</a> 
+      <a href="contact.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">Contact</a>
+      
+      <div class="pt-2"><a href="news_en.html" class="text-xs px-2 py-1 rounded border border-gray-300 dark:border-neutral-700 hover:bg-gray-50 dark:hover:bg-neutral-800">English</a></div>
+    </nav>
+  </div>
+</header>
+
+
+  <main class="max-w-5xl mx-auto px-4 py-10">
+    <h2 class="text-2xl font-bold mb-6">ニュース</h2>
+    
+    <ul class="space-y-2">
+      <!-- ここにコメントとして残したい内容<li>2025-10-01 — <strong>学振特別研究員PD</strong>として東北大学吉田研究室（航空宇宙工学専攻）にて研究活動を実施します.</li>
+      <li>2025-09-30 — 学振特別研究員DC1としての研究活動が終了しました.</li>
+      <li>2025-09-30 — 東北大学国際共同大学院プログラムとしての研究活動が終了しました.</li>
+      <li>2025-09-25 — <strong>博士（工学）</strong>が授与されました.</li>
+      <li>2025-08-22 — 博士論文の審査に合格し博士課程の全ての単位を取得しました（<strong>2年短期修了</strong>）.</li> -->
+      <li>2025-08-10 — Journal of Terramechanics に主著論文1件が掲載されました.</li>
+      <!-- ここにコメントとして残したい内容<li>2025-08-01 — 博士論文を最終提出しました.</li> -->
+      <li>2025-07-31 — 国際会議ISTVS2025にて共著論文1件が採択されました.</li>
+      <li>2024-07-22 — 計測自動制御学会東北支部 第353回研究集会での発表が<strong>優秀発表奨励賞</strong>に選ばれました.</li>
+      <li>2024-07-14 — 計測自動制御学会東北支部 第353回研究集会（@八戸）にて発表を行いました.</li>
+      <!-- ここにコメントとして残したい内容<li>2025-07-11 — 博士論文最終審査会を実施しました.</li> -->
+      <li>2025-05-20 — Journal of Terramechanics に主著論文1件が掲載されました.</li>
+      <li>2025-04-10 — Space Science Reviews に共著論文1件が掲載されました.</li>
+      <li>2025-03-24 — <strong>Concordia University, Aerospace Lab. </strong>(@Montreal) での研究留学を開始しました（~7月まで）.</li>
+      <li>2025-02-28 — 株式会社ispaceにて6か月間のインターンシップを実施しました.</li>
+      <li>2025-02-15 — Journal of Terramechanics に主著論文1件が掲載されました.</li>
+      <li>2025-01-25 — <strong>カナダ留学奨励費（Globalink Research Award）</strong>を受賞しました.</li>
+      <li>2025-01-20 — Aerospace に主著論文1件が掲載されました.</li>
+      <li>2024-12-23 — Journal of Evolving Space Activities に主著論文1件が掲載されました.</li>
+      <li>2024-10-31 — 国際会議ISTVS2024（@横浜）にて2件の発表を行いました.</li>
+      <li>2024-07-20 — 東北大学サマープログラムTESP2024においてアドミニストレイティブアシスタントとして活動します.</li>
+      <li>2024-07-15 — 国際会議ISTVS2024にて主著2件を含む3件の論文が採択されました.</li>
+      <li>2024-04-01 — <strong>学振特別研究員奨励費 「車輪牽引性能にもとづく動力学的テラメカニクス理論の新構築」</strong>研究課題を開始しました.</li>
+      <li>2024-04-01 — <strong>学振特別研究員DC1</strong>として研究活動に従事します.</li>
+      <li>2024-03-31 — 東北大学 次世代研究者挑戦的研究プログラムとしての研究活動が終了しました.</li>
+      <li>2024-03-25 — <strong>東北大学 工学研究科長賞</strong> を受賞しました.</li>
+      <li>2024-01-01 — ホームページを開設しました.</li>
+    </ul></main>
+  
+
+
+
+<footer class="border-t border-gray-200 dark:border-neutral-800 py-8 mt-4">
+  <div class="max-w-5xl mx-auto px-4 text-sm text-gray-600 dark:text-neutral-400 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+    <div>© 2025 Keisuke Takehana. All rights reserved.</div>
+    <div class="flex gap-4 no-print">
+      <a class="underline" href="contact.html">Contact</a>
+      <button class="underline" onclick="window.print()">印刷 / PDF保存</button>
+    </div>
+  </div>
+</footer>
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileNav = document.getElementById('mobileNav');
+  if (menuBtn && mobileNav) { menuBtn.addEventListener('click', () => {
+    const open = mobileNav.classList.toggle('hidden') === false;
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });}
+  const themeBtn = document.getElementById('themeBtn');
+  const root = document.documentElement;
+  if (themeBtn) { 
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (prefersDark) root.classList.add('dark');
+    themeBtn.textContent = root.classList.contains('dark') ? 'ライト モード' : 'ダーク モード';
+    themeBtn.addEventListener('click', () => {
+      root.classList.toggle('dark');
+      themeBtn.textContent = root.classList.contains('dark') ? 'ライト モード' : 'ダーク モード';
+    });
+  }
+</script>
+<style>:root{scroll-padding-top:80px} body{padding-top:72px}</style>
+
+</body>
+</html>

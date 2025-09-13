@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Teaching - Researcher Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <meta name="color-scheme" content="light dark" />
+  <style>@media print{ .no-print{ display:none !important; } }</style>
+</head>
+<body class="bg-gray-50 text-gray-800 dark:bg-neutral-900 dark:text-neutral-100">
+  <header class="bg-white dark:bg-neutral-900 border-b border-gray-200 dark:border-neutral-800 sticky top-0 z-50">
+  <div class="max-w-5xl mx-auto px-4">
+    <div class="h-14 flex items-center justify-between">
+      <a href="index.html" class="font-bold">Keisuke Takehana</a>
+
+      <nav class="hidden sm:flex gap-4 text-sm">
+        <a href="index.html" class="hover:opacity-80">Home</a> 
+        <a href="news.html" class="hover:opacity-80">News</a> 
+        <a href="about.html" class="hover:opacity-80 text-blue-600 font-semibold">About Me</a> 
+        <a href="publications.html" class="hover:opacity-80">Publications</a> 
+        <a href="projects.html" class="hover:opacity-80">Projects</a> 
+        <a href="talks.html" class="hover:opacity-80">Talks</a> 
+        <a href="media.html" class="hover:opacity-80">Media</a> 
+        <a href="contact.html" class="hover:opacity-80">Contact</a></nav>
+      
+      <div class="flex items-center gap-2">
+        <a href="about_en.html" class="text-xs px-2 py-1 rounded border border-gray-300 dark:border-neutral-700 hover:bg-gray-50 dark:hover:bg-neutral-800">English</a>
+        <button id="menuBtn" class="sm:hidden inline-flex items-center justify-center w-10 h-10 rounded-md border border-gray-300 dark:border-neutral-700" aria-expanded="false" aria-controls="mobileNav" aria-label="メニュー">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <nav id="mobileNav" class="sm:hidden hidden flex-col gap-2 pb-3 text-sm" role="menu">
+      <a href="index.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">Home</a> 
+      <a href="news.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">News</a> 
+      <a href="about.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800 bg-gray-100 dark:bg-neutral-800 font-semibold">About Me</a> 
+      <a href="publications.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">Publications</a> 
+      <a href="projects.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">Projects</a> 
+      <a href="talks.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">Talks</a> 
+      <a href="media.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">Media</a> 
+      <a href="contact.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">Contact</a>
+      
+      <div class="pt-2"><a href="about_en.html" class="text-xs px-2 py-1 rounded border border-gray-300 dark:border-neutral-700 hover:bg-gray-50 dark:hover:bg-neutral-800">English</a></div>
+    </nav>
+  </div>
+</header>
+
+
+
+<main class="max-w-5xl mx-auto px-4 py-10">
+  <h2 class="text-2xl font-bold mb-6">About me</h2>
+
+  <section class="mb-8">
+    <h3 class="text-xl font-semibold mb-3">経歴（研究歴）</h3>
+    <ul class="space-y-2 list-disc pl-5">
+      <!-- ここにコメントとして残したい内容 <li><strong>2025年10月–　　現在　　— 独立行政法人 日本学術振興会 特別研究員PD</strong></li>  -->
+      <li>2024年04月–　　現在　　 — 独立行政法人 日本学術振興会 特別研究員DC1</li>
+      <li>2025年01月–2025年07月 — コンコルディア大学（カナダ）, Aerospace Robotics Lab., 研究生</li>
+      <li>2024年09月–2025年02月 — 株式会社ispace, 長期インターンシップ</li>
+      <li>2024年07月–2024年08月 — 東北大学大学院工学研究科, アドミニストレイティブアシスタント</li>
+      <li>2022年10月–2024年03月 — 東北大学大学院工学研究科, リサーチアシスタント</li>
+      <li>2022年04月–2024年03月 — 株式会社amulapo, 長期インターンシップ</li>
+      <li>2023年04月–2023年05月 — ドイツ航空宇宙センター (DLR), Institute of System Dynamics and Control, 研究生</li>
+    </ul>
+  </section>
+
+  <section class="mb-8">
+    <h3 class="text-xl font-semibold mb-3">学歴</h3>
+    <ul class="space-y-4 list-disc pl-5">
+      <li><b>2023年10月– 現在  — 東北大学 大学院工学研究科 航空宇宙工学専攻 博士課程後期3年 (博士) の課程</b>
+        <ul class="list-disc pl-5 mt-2 space-y-1">
+          <li>指導教員：吉田和哉 教授</li>
+          <li>博士論文：Terramechanics-Based Traction Analysis of High-Speed Mobility for Lunar Rovers</li>
+          <!-- ここにコメントとして残したい内容 <li><span class="font-bold text-yellow-800">2.0年（/3.0年）短期修了</span></li> -->
+          <li><span class="font-bold text-yellow-800">Globalink Research Award (優秀カナダ留学生表彰)</span></li>
+        </ul>
+      </li>
+
+      <li><b>2021年10月–2023年09月 — 東北大学 大学院工学研究科 航空宇宙工学専攻 博士課程前期2年 (修士) の課程</b>
+        <ul class="list-disc pl-5 mt-2 space-y-1">
+          <li>指導教員：吉田和哉 教授</li>
+          <li>修士論文：Prediction of Driving Performance of Lunar Exploration Rover Based on Traction Analysis</li>
+          <li><span class="font-bold text-yellow-800">工学研究科長賞（優秀修士学生賞）</span></li>
+        </ul>
+      </li>
+
+      <li><b>2018年04月–2021年09月 — 東北大学 工学部 機械知能・航空工学科</b>
+        <ul class="list-disc pl-5 mt-2 space-y-1">
+          <li>指導教員：吉田和哉 教授</li>
+          <li>卒業論文：高速走行する月面探査ローバーの走行力学性能評価</li>
+          <li><span class="font-bold text-yellow-800">3.5年（/4.0年）早期卒業</span></li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <section class="mb-8">
+    <h3 class="text-xl font-semibold mb-3">受賞歴</h3>
+    <ol class="list-decimal pl-5 space-y-1">
+      <li>2025年07月 — <strong>優秀発表奨励賞</strong>, 計測自動制御学会東北支部 </li>
+      <li>2024年03月 — <strong>工学研究科長賞</strong>, 東北大学  </li>
+      <li>2023年11月 — <strong>Best Paper Award</strong>, The 16th European-African Regional Conference of the ISTVS  </li>
+    </ol>
+  </section>
+
+
+<section class="mb-8">
+    <h3 class="text-xl font-semibold mb-3">競争的資金</h3>
+    <ol class="list-decimal pl-5 space-y-1">
+      <li>2024年04月–2027年03月 — 日本学術振興会 科学研究費助成事業（科研費） 特別研究員奨励費</li>   
+          <ul class="list-disc pl-5 mt-2 space-y-1">
+          <li>課題名："<a href="https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-24KJ0413/" class="underline font-bold" target="_blank"><b>車輪牽引性能にもとづく動力学的テラメカニクス理論の新構築</b></a>"</li>
+        </ul>   
+    </ol>
+  </section>
+
+
+
+  <section class="mb-8">
+    <h3 class="text-xl font-semibold mb-3">奨学金</h3>
+    <ol class="list-decimal pl-5 space-y-1">
+      <!-- ここにコメントとして残したい内容 <li>2025年10月–2027年03月 — 独立行政法人 日本学術振興会 特別研究員PD 研究奨励金 </li> -->
+      <li>2024年04月–2025年09月 — 独立行政法人 日本学術振興会 特別研究員DC1 研究奨励金 </li>
+      <li>2023年10月–2024年03月 — 東北大学 次世代研究者挑戦的研究プログラム 研究奨励費 </li>
+      <li>2022年10月–2023年09月 — 東北大学 機械科学技術国際共同大学院プログラム (GP-Mech) RA雇用費 </li>      
+    </ol>
+  </section>
+
+  <section class="mb-8">
+    <h3 class="text-xl font-semibold mb-3">研究助成</h3>
+    <ol class="list-decimal pl-5 space-y-1">
+      <li>2025年03月–2025年06月 — Mitacs (Canada), Globalink Research Award</li> 
+      <li>2025年03月–2025年06月 — 東北大学 機械科学技術国際共同大学院プログラム (GP-Mech) 留学助成費 </li>   
+      <li>2023年10月–2024年03月 — 東北大学 次世代研究者挑戦的研究プログラム 研究費 </li>
+      <li>2023年04月–2023年05月 — 東北大学 機械科学技術国際共同大学院プログラム (GP-Mech) 留学助成費 </li>      
+    </ol>
+  </section>
+
+
+
+  <section class="mb-8">
+    <h3 class="text-xl font-semibold mb-3">講義歴</h3>
+    <ol class="list-decimal pl-5 space-y-1">
+      <li>Tohoku University Engineering Summer Program (TESP 2024)</li>
+        <ul class="list-disc pl-5 mt-2 space-y-1">
+          <li>機関：東北大学大学院工学研究科</li>
+          <li>期間：2024年07月–2024年08月</li>
+          <li>職位：アドミニストレイティブアシスタント</li>
+        </ul>   
+    </ol>
+  </section>
+
+  <section class="mb-8">
+    <h3 class="text-xl font-semibold mb-3">委員会活動</h3>
+    <ol class="list-decimal pl-5 space-y-1">
+      <li>東北大学 機械系同窓会 理事 (2024年4月～) </li>
+      <li>東北大学 機械系院生会代表 (2024年04月–2025年03月) </li>
+      <li>東北大学 機械系代表学生会員 (2022年04月–2023年03月) </li>
+    </ol>
+  </section>
+
+
+  <section class="mb-8">
+    <h3 class="text-xl font-semibold mb-3">査読歴</h3>
+    <ol class="list-decimal pl-5 space-y-1">
+      <li>International Conference on Space Robotics (iSpaRo2025)</li>
+      <li>Acta Astronautica</li>
+      <li>The Planetary Science Journal</li>
+      <li>International Society for Terrain-Vehicle Systems (ISTVS2024)</li>
+    </ol>
+  </section>
+
+  
+
+  <section class="mb-8">
+    <h3 class="text-xl font-semibold mb-3">共同研究先</h3>
+    <ol class="list-decimal pl-5 space-y-1">
+      <li>トヨタ自動車株式会社</li>
+      <li>株式会社ispace</li>
+      <li>株式会社amulapo</li>
+    </ol>
+  </section>
+
+  <section>
+    <h3 class="text-xl font-semibold mb-3">所属学会</h3>
+    <ol class="list-decimal pl-5 space-y-1">
+      <li>日本機械学会 </li>
+      <li>日本航空宇宙学会</li>
+      <li>計測自動制御学会 </li>
+    </ol>
+  </section>
+</main>
+  
+
+
+
+<footer class="border-t border-gray-200 dark:border-neutral-800 py-8 mt-4">
+  <div class="max-w-5xl mx-auto px-4 text-sm text-gray-600 dark:text-neutral-400 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+    <div>© 2025 Keisuke Takehana. All rights reserved.</div>
+    <div class="flex gap-4 no-print">
+      <a class="underline" href="contact.html">Contact</a>
+      <button class="underline" onclick="window.print()">印刷 / PDF保存</button>
+    </div>
+  </div>
+</footer>
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileNav = document.getElementById('mobileNav');
+  if (menuBtn && mobileNav) { menuBtn.addEventListener('click', () => {
+    const open = mobileNav.classList.toggle('hidden') === false;
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });}
+  const themeBtn = document.getElementById('themeBtn');
+  const root = document.documentElement;
+  if (themeBtn) { 
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (prefersDark) root.classList.add('dark');
+    themeBtn.textContent = root.classList.contains('dark') ? 'ライト モード' : 'ダーク モード';
+    themeBtn.addEventListener('click', () => {
+      root.classList.toggle('dark');
+      themeBtn.textContent = root.classList.contains('dark') ? 'ライト モード' : 'ダーク モード';
+    });
+  }
+</script>
+<style>:root{scroll-padding-top:80px} body{padding-top:72px}</style>
+
+</body>
+</html>
