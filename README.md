@@ -1,1 +1,0 @@
-# ktakehana.github.io
