@@ -1,120 +1,1278 @@
 <!DOCTYPE html>
 <html lang="ja" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>News - Researcher Website</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <meta name="color-scheme" content="light dark" />
-  <style>@media print{ .no-print{ display:none !important; } }</style>
+
+  <title>News - Keisuke Takehana</title>
+
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="bg-gray-50 text-gray-800 dark:bg-neutral-900 dark:text-neutral-100">
-  <header class="bg-white dark:bg-neutral-900 border-b border-gray-200 dark:border-neutral-800 sticky top-0 z-50">
-  <div class="max-w-5xl mx-auto px-4">
-    <div class="h-14 flex items-center justify-between">
-      <a href="index.html" class="font-bold">Keisuke Takehana, Ph.D.</a>
 
+<body>
 
-      <nav class="hidden sm:flex gap-4 text-sm">
-        <a href="index.html" class="hover:opacity-80">Home</a> 
-        <a href="news.html" class="hover:opacity-80 text-blue-600 font-semibold">News</a> 
-        <a href="about.html" class="hover:opacity-80">About Me</a> 
-        <a href="publications.html" class="hover:opacity-80">Publications</a> 
-        <a href="projects.html" class="hover:opacity-80">Projects</a> 
-        <a href="talks.html" class="hover:opacity-80">Talks</a> 
-        <a href="media.html" class="hover:opacity-80">Media</a> 
-        <a href="contact.html" class="hover:opacity-80">Contact</a></nav>
-      
-      <div class="flex items-center gap-2">
-        <a href="news_en.html" class="text-xs px-2 py-1 rounded border border-gray-300 dark:border-neutral-700 hover:bg-gray-50 dark:hover:bg-neutral-800">English</a>
-        <button id="menuBtn" class="sm:hidden inline-flex items-center justify-center w-10 h-10 rounded-md border border-gray-300 dark:border-neutral-700" aria-expanded="false" aria-controls="mobileNav" aria-label="メニュー">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+  <!-- =====================================================
+       Header
+       ===================================================== -->
+
+  <header class="site-header">
+
+    <div class="site-header-inner">
+
+      <a href="index.html" class="site-name">
+        Keisuke Takehana, Ph.D.
+      </a>
+
+      <nav
+        class="desktop-nav"
+        aria-label="メインナビゲーション"
+      >
+        <a href="index.html">Home</a>
+        <a href="news.html" class="active">News</a>
+        <a href="about.html">About Me</a>
+        <a href="publications.html">Publications</a>
+        <a href="projects.html">Projects</a>
+        <a href="talks.html">Talks</a>
+        <a href="media.html">Media</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="header-controls">
+
+        <a href="news_en.html" class="language-link">
+          English
+        </a>
+
+        <button
+          id="menuBtn"
+          class="menu-button"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobileNav"
+          aria-label="メニューを開く"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
         </button>
+
       </div>
+
     </div>
 
-    <nav id="mobileNav" class="sm:hidden hidden flex-col gap-2 pb-3 text-sm" role="menu">
-      <a href="index.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">Home</a> 
-      <a href="news.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800 bg-gray-100 dark:bg-neutral-800 font-semibold">News</a> 
-      <a href="about.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">About Me</a> 
-      <a href="publications.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">Publications</a> 
-      <a href="projects.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">Projects</a> 
-      <a href="talks.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">Talks</a> 
-      <a href="media.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">Media</a> 
-      <a href="contact.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">Contact</a>
-      
-      <div class="pt-2"><a href="news_en.html" class="text-xs px-2 py-1 rounded border border-gray-300 dark:border-neutral-700 hover:bg-gray-50 dark:hover:bg-neutral-800">English</a></div>
+    <!-- Mobile navigation -->
+
+    <nav
+      id="mobileNav"
+      class="mobile-nav"
+      aria-label="モバイルナビゲーション"
+    >
+      <a href="index.html">Home</a>
+      <a href="news.html" class="active">News</a>
+      <a href="about.html">About Me</a>
+      <a href="publications.html">Publications</a>
+      <a href="projects.html">Projects</a>
+      <a href="talks.html">Talks</a>
+      <a href="media.html">Media</a>
+      <a href="contact.html">Contact</a>
+
+      <div class="mobile-language">
+        <a href="news_en.html" class="language-link">
+          English
+        </a>
+      </div>
+
     </nav>
-  </div>
-</header>
+
+  </header>
 
 
-  <main class="max-w-5xl mx-auto px-4 py-10">
-    <h2 class="text-2xl font-bold mb-6">ニュース</h2>
-    
-    <ul class="space-y-2">
-      <li>2025-10-10 — 国際会議International Conference on Space Robotics (iSpaRo)にて主著1件を含む2件の論文が採択されました.</li>
-      <li>2025-10-01 — <strong>学振特別研究員PD</strong>として東北大学吉田研究室（航空宇宙工学専攻）にて研究活動を実施します.</li>
-      <li>2025-09-30 — 学振特別研究員DC1としての研究活動が終了しました.</li>
-      <li>2025-09-30 — 東北大学国際共同大学院プログラムとしての研究活動が終了しました.</li>
-      <li>2025-09-25 — <strong>博士（工学）</strong>が授与されました.</li>
-      <li>2025-08-22 — 博士論文の審査に合格し博士課程の全ての単位を取得しました（<strong>2年短期修了</strong>）.</li> 
-      <li>2025-08-10 — Journal of Terramechanics に主著論文1件が掲載されました.</li>
-      <li>2025-08-01 — 博士論文を最終提出しました.</li> 
-      <li>2025-07-31 — 国際会議ISTVS2025にて共著論文1件が採択されました.</li>
-      <li>2024-07-22 — 計測自動制御学会東北支部 第353回研究集会での発表が<strong>優秀発表奨励賞</strong>に選ばれました.</li>
-      <li>2024-07-14 — 計測自動制御学会東北支部 第353回研究集会（@八戸）にて発表を行いました.</li>
-      <li>2025-07-11 — 博士論文最終審査会を実施しました.</li> 
-      <li>2025-05-20 — Journal of Terramechanics に主著論文1件が掲載されました.</li>
-      <li>2025-04-10 — Space Science Reviews に共著論文1件が掲載されました.</li>
-      <li>2025-03-24 — <strong>Concordia University, Aerospace Lab. </strong>(@Montreal) での研究留学を開始しました（~7月まで）.</li>
-      <li>2025-02-28 — 株式会社ispaceにて6か月間のインターンシップを実施しました.</li>
-      <li>2025-02-15 — Journal of Terramechanics に主著論文1件が掲載されました.</li>
-      <li>2025-01-25 — <strong>カナダ留学奨励費（Globalink Research Award）</strong>を受賞しました.</li>
-      <li>2025-01-20 — Aerospace に主著論文1件が掲載されました.</li>
-      <li>2024-12-23 — Journal of Evolving Space Activities に主著論文1件が掲載されました.</li>
-      <li>2024-10-31 — 国際会議ISTVS2024（@横浜）にて2件の発表を行いました.</li>
-      <li>2024-07-20 — 東北大学サマープログラムTESP2024においてアドミニストレイティブアシスタントとして活動します.</li>
-      <li>2024-07-15 — 国際会議ISTVS2024にて主著2件を含む3件の論文が採択されました.</li>
-      <li>2024-04-01 — <strong>学振特別研究員奨励費 「車輪牽引性能にもとづく動力学的テラメカニクス理論の新構築」</strong>研究課題を開始しました.</li>
-      <li>2024-04-01 — <strong>学振特別研究員DC1</strong>として研究活動に従事します.</li>
-      <li>2024-03-31 — 東北大学 次世代研究者挑戦的研究プログラムとしての研究活動が終了しました.</li>
-      <li>2024-03-25 — <strong>東北大学 工学研究科長賞</strong> を受賞しました.</li>
-      <li>2024-01-01 — ホームページを開設しました.</li>
-    </ul></main>
-  
+  <!-- =====================================================
+       Main content
+       ===================================================== -->
+
+  <main class="site-main">
+
+    <h1 class="page-title">
+      News
+    </h1>
+
+    <section class="page-section">
+
+      <h2 class="section-title">
+        Latest News
+      </h2>
+
+      <p class="news-introduction">
+        研究成果，受賞，学会発表，研究活動および経歴に関する
+        最新情報を掲載しています．
+      </p>
+
+        <!-- =================================================
+            2026
+            ================================================= -->
+
+
+        <!--  <li class="news-item">
+
+        <time
+            class="news-date"
+            datetime="2026-08-04"
+        >
+            2026.08.04
+        </time>
+
+        <a
+            href="about.html"
+            class="news-category news-category-funding"
+        >
+            Funding
+        </a>
+
+        <div class="news-content">
+            日本学術振興会
+            <strong>科学研究費助成事業（研究活動スタート支援）</strong>
+            による研究課題
+            「○○○○○○」
+            を開始しました．
+        </div>
+
+        </li>-->
+
+        <li class="news-item">
+
+          <time
+            class="news-date"
+            datetime="2026-07-31"
+          >
+            2026.07.31
+          </time>
+
+          <a
+            href="about.html"
+            class="news-category news-category-funding"
+          >
+            Funding
+          </a>
+
+          <div class="news-content">
+            日本学術振興会特別研究員奨励費による研究課題を終了しました．
+          </div>
+
+        </li>
 
 
 
-<footer class="border-t border-gray-200 dark:border-neutral-800 py-8 mt-4">
-  <div class="max-w-5xl mx-auto px-4 text-sm text-gray-600 dark:text-neutral-400 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-    <div>© 2025 Keisuke Takehana. All rights reserved.</div>
-    <div class="flex gap-4 no-print">
-      <a class="underline" href="contact.html">Contact</a>
-      <button class="underline" onclick="window.print()">印刷 / PDF保存</button>
+        <li class="news-item">
+
+        <time
+            class="news-date"
+            datetime="2026-07-16"
+        >
+            2026.07.16
+        </time>
+
+        <a
+            href="about.html"
+            class="news-category news-category-service"
+        >
+            Service
+        </a>
+
+        <div class="news-content">
+            <em>IEEE/SICE International Symposium on System Integration (SII 2027)</em>
+            において，Principal Organizerとして提案した
+            スペシャルセッション
+            <strong>
+            "Intelligent Space Robotics for Future Space Exploration and On-Orbit Servicing"
+            </strong>
+            が採択されました．
+        </div>
+
+        </li>
+
+
+        <li class="news-item">
+
+        <time
+            class="news-date"
+            datetime="2026-05-29"
+        >
+            2026.05.29
+        </time>
+
+        <a
+            href="talks.html"
+            class="news-category news-category-talk"
+        >
+            Talk
+        </a>
+
+        <div class="news-content">
+            国際ワークショップ
+            <em>RENKEI ECR COLLABORATION LAB 2026</em>
+            において，
+            「Sustainable and Scalable Space Development and Utilization」をテーマとした
+            <strong>国際パネルディスカッション</strong>
+            にパネリストとして登壇しました．
+        </div>
+
+        </li>
+
+
+        <li class="news-item">
+
+        <time
+            class="news-date"
+            datetime="2026-05-29"
+        >
+            2026.05.29
+        </time>
+
+        <a
+            href="talks.html"
+            class="news-category news-category-talk"
+        >
+            Talk
+        </a>
+
+        <div class="news-content">
+            国際ワークショップ
+            <em>RENKEI ECR COLLABORATION LAB 2026</em>
+            において，
+            「Development of Capture and Servicing Technologies for Uncooperative Satellites in On-Orbit Servicing (OOS) for Space Infrastructure」
+            という題目で発表しました．
+        </div>
+
+        </li>
+
+        <li class="news-item">
+
+        <time
+            class="news-date"
+            datetime="2026-05-20"
+        >
+            2026.05.20
+        </time>
+
+        <a
+            href="about.html"
+            class="news-category news-category-service"
+        >
+            Service
+        </a>
+
+        <div class="news-content">
+            第70回宇宙科学技術連合講演会において，
+            オーガナイザを務める企画セッション
+            「軌道上サービスに向けた非協力衛星に対する近傍運用・捕獲技術と地上検証」
+            の開催が決定しました．
+        </div>
+
+        </li>
+
+        <h3 class="news-year">
+        2026
+        </h3>
+
+        <ul class="news-list">
+
+        
+                        <li class="news-item">
+
+          <time
+            class="news-date"
+            datetime="2026-03-30"
+          >
+            2026.03.30
+          </time>
+
+          <a
+            href="media.html"
+            class="news-category news-category-media"
+          >
+            Media
+          </a>
+
+          <div class="news-content">
+            総長賞および大学院研究奨励賞の受賞が東北大学機械系のHPにて紹介されました．
+          </div>
+
+
+
+        <li class="news-item">
+
+            <time
+            class="news-date"
+            datetime="2026-03-25"
+            >
+            2026.03.25
+            </time>
+
+            <a
+            href="about.html"
+            class="news-category news-category-award"
+            >
+            Award
+            </a>
+
+            <div class="news-content">
+            <strong>東北大学総長賞</strong>
+            を受賞しました．
+            </div>
+
+        </li>
+
+
+        <li class="news-item">
+
+            <time
+            class="news-date"
+            datetime="2026-02-24"
+            >
+            2026.02.24
+            </time>
+
+            <a
+            href="about.html"
+            class="news-category news-category-award"
+            >
+            Award
+            </a>
+
+            <div class="news-content">
+            自動車技術会
+            <strong>大学院研究奨励賞</strong>
+            を受賞しました．
+            </div>
+
+        </li>
+
+        <li class="news-item">
+
+        <time
+            class="news-date"
+            datetime="2026-01-05"
+        >
+            2026.01.05
+        </time>
+
+        <a
+            href="about.html"
+            class="news-category news-category-service"
+        >
+            Service
+        </a>
+
+        <div class="news-content">
+            計測自動制御学会東北支部の
+            <strong>広報幹事</strong>
+            に就任しました．
+        </div>
+
+        </li>
+
+
+        </ul>
+
+
+      <!-- =================================================
+           2025
+           ================================================= -->
+
+      <h3 class="news-year">
+        2025
+      </h3>
+
+      <ul class="news-list">
+
+        <li class="news-item">
+
+        <time
+            class="news-date"
+            datetime="2025-12-03"
+        >
+            2025.12.03
+        </time>
+
+        <a
+            href="talks.html"
+            class="news-category news-category-talk"
+        >
+            Talk
+        </a>
+
+        <div class="news-content">
+            国際会議
+            <em>International Conference on Space Robotics（iSpaRo 2025）</em>
+            にて，研究発表1件を行いました．
+        </div>
+
+        </li>
+
+
+        <li class="news-item">
+
+        <time
+            class="news-date"
+            datetime="2025-12-01"
+        >
+            2025.12.01
+        </time>
+
+        <a
+            href="about.html"
+            class="news-category news-category-research"
+        >
+            Research
+        </a>
+
+        <div class="news-content">
+            東北大学大学院工学研究科航空宇宙工学専攻
+            宇宙インフラ工学研究分野・桒原研究室における
+            研究活動を開始しました．
+        </div>
+
+        </li>
+
+
+        <li class="news-item">
+
+        <time
+            class="news-date"
+            datetime="2025-12-01"
+        >
+            2025.12.01
+        </time>
+
+        <a
+            href="about.html"
+            class="news-category news-category-career"
+        >
+            Career
+        </a>
+
+        <div class="news-content">
+            東北大学グリーン未来創造機構
+            グリーンクロステック研究センターの
+            <strong>特任助教</strong>
+            に着任しました．
+        </div>
+
+        </li>
+
+
+        <li class="news-item">
+
+        <time
+            class="news-date"
+            datetime="2025-11-30"
+        >
+            2025.11.30
+        </time>
+
+        <a
+            href="about.html"
+            class="news-category news-category-career"
+        >
+            Career
+        </a>
+
+        <div class="news-content">
+            日本学術振興会特別研究員PDとしての研究活動を終了しました．
+        </div>
+
+        </li>
+
+        <li class="news-item">
+
+          <time
+            class="news-date"
+            datetime="2025-10-10"
+          >
+            2025.10.10
+          </time>
+
+          <a
+            href="publications.html"
+            class="news-category news-category-publication"
+          >
+            Publication
+          </a>
+
+          <div class="news-content">
+            国際会議
+            <em>International Conference on Space Robotics（iSpaRo）</em>
+            にて，筆頭著者論文1件を含む2件の論文が採択されました．
+          </div>
+
+        </li>
+
+
+        <li class="news-item">
+
+          <time
+            class="news-date"
+            datetime="2025-10-01"
+          >
+            2025.10.01
+          </time>
+
+          <a
+            href="about.html"
+            class="news-category news-category-career"
+          >
+            Career
+          </a>
+
+          <div class="news-content">
+            <strong>日本学術振興会特別研究員PD</strong>として，
+            東北大学大学院工学研究科航空宇宙工学専攻における
+            研究活動を開始しました．
+          </div>
+
+        </li>
+
+
+        <li class="news-item">
+
+          <time
+            class="news-date"
+            datetime="2025-09-30"
+          >
+            2025.09.30
+          </time>
+
+          <a
+            href="about.html"
+            class="news-category news-category-career"
+          >
+            Career
+          </a>
+
+          <div class="news-content">
+            日本学術振興会特別研究員DC1としての研究活動を終了しました．
+          </div>
+
+        </li>
+
+
+        <li class="news-item">
+
+          <time
+            class="news-date"
+            datetime="2025-09-30"
+          >
+            2025.09.30
+          </time>
+
+          <a
+            href="about.html"
+            class="news-category news-category-career"
+          >
+            Career
+          </a>
+
+          <div class="news-content">
+            東北大学機械科学技術国際共同大学院プログラムにおける
+            活動を終了しました．
+          </div>
+
+        </li>
+
+
+        <li class="news-item">
+
+          <time
+            class="news-date"
+            datetime="2025-09-25"
+          >
+            2025.09.25
+          </time>
+
+          <a
+            href="about.html"
+            class="news-category news-category-degree"
+          >
+            Degree
+          </a>
+
+          <div class="news-content">
+            東北大学より
+            <strong>博士（工学）</strong>
+            の学位を授与されました．
+          </div>
+
+        </li>
+
+
+        <li class="news-item">
+
+          <time
+            class="news-date"
+            datetime="2025-08-22"
+          >
+            2025.08.22
+          </time>
+
+          <a
+            href="about.html"
+            class="news-category news-category-degree"
+          >
+            Degree
+          </a>
+
+          <div class="news-content">
+            博士論文の審査に合格し，博士後期課程の修了要件を満たしました．
+            博士後期課程は
+            <strong>2年間で短縮修了</strong>
+            しました．
+          </div>
+
+        </li>
+
+
+        <li class="news-item">
+
+          <time
+            class="news-date"
+            datetime="2025-08-10"
+          >
+            2025.08.10
+          </time>
+
+          <a
+            href="publications.html"
+            class="news-category news-category-publication"
+          >
+            Publication
+          </a>
+
+          <div class="news-content">
+            <em>Journal of Terramechanics</em>
+            に筆頭著者論文が掲載されました．
+          </div>
+
+        </li>
+
+
+        <li class="news-item">
+
+          <time
+            class="news-date"
+            datetime="2025-08-01"
+          >
+            2025.08.01
+          </time>
+
+          <a
+            href="about.html"
+            class="news-category news-category-degree"
+          >
+            Degree
+          </a>
+
+          <div class="news-content">
+            博士論文を最終提出しました．
+          </div>
+
+        </li>
+
+
+        <li class="news-item">
+
+          <time
+            class="news-date"
+            datetime="2025-07-31"
+          >
+            2025.07.31
+          </time>
+
+          <a
+            href="publications.html"
+            class="news-category news-category-publication"
+          >
+            Publication
+          </a>
+
+          <div class="news-content">
+            国際会議
+            <em>
+              55th Conference of the International Society
+              for Terrain-Vehicle Systems（ISTVS 2025）
+            </em>
+            に共著論文1件が採択されました．
+          </div>
+
+        </li>
+
+
+        <li class="news-item">
+
+          <time
+            class="news-date"
+            datetime="2025-07-22"
+          >
+            2025.07.22
+          </time>
+
+          <a
+            href="about.html"
+            class="news-category news-category-award"
+          >
+            Award
+          </a>
+
+          <div class="news-content">
+            計測自動制御学会東北支部第353回研究集会における発表が，
+            <strong>優秀発表奨励賞</strong>
+            に選出されました．
+          </div>
+
+        </li>
+
+
+        <li class="news-item">
+
+          <time
+            class="news-date"
+            datetime="2025-07-14"
+          >
+            2025.07.14
+          </time>
+
+          <a
+            href="talks.html"
+            class="news-category news-category-talk"
+          >
+            Talk
+          </a>
+
+          <div class="news-content">
+            計測自動制御学会東北支部第353回研究集会にて，研究発表1件を行いました．
+          </div>
+
+        </li>
+
+
+        <li class="news-item">
+
+          <time
+            class="news-date"
+            datetime="2025-07-11"
+          >
+            2025.07.11
+          </time>
+
+          <a
+            href="about.html"
+            class="news-category news-category-degree"
+          >
+            Degree
+          </a>
+
+          <div class="news-content">
+            博士論文最終審査会を実施しました．
+          </div>
+
+        </li>
+
+
+        <li class="news-item">
+
+          <time
+            class="news-date"
+            datetime="2025-05-20"
+          >
+            2025.05.20
+          </time>
+
+          <a
+            href="publications.html"
+            class="news-category news-category-publication"
+          >
+            Publication
+          </a>
+
+          <div class="news-content">
+            <em>Journal of Terramechanics</em>
+            に筆頭著者論文が掲載されました．
+          </div>
+
+        </li>
+
+
+        <li class="news-item">
+
+          <time
+            class="news-date"
+            datetime="2025-04-10"
+          >
+            2025.04.10
+          </time>
+
+          <a
+            href="publications.html"
+            class="news-category news-category-publication"
+          >
+            Publication
+          </a>
+
+          <div class="news-content">
+            <em>Space Science Reviews</em>
+            に共著論文が掲載されました．
+          </div>
+
+        </li>
+
+        <li class="news-item">
+
+        <time
+            class="news-date"
+            datetime="2025-03-24"
+        >
+            2025.03.24
+        </time>
+
+        <a
+            href="about.html"
+            class="news-category news-category-funding"
+        >
+            Funding
+        </a>
+
+        <div class="news-content">
+            カナダ・コンコルディア大学における研究留学に際し，東北大学 機械科学技術国際共同大学院プログラム
+            （GP-Mech）より海外渡航助成を受けました．
+        </div>
+
+        </li>
+
+        <li class="news-item">
+
+          <time
+            class="news-date"
+            datetime="2025-03-24"
+          >
+            2025.03.24
+          </time>
+
+          <a
+            href="about.html"
+            class="news-category news-category-research"
+          >
+            Research
+          </a>
+
+          <div class="news-content">
+            カナダ・コンコルディア大学
+            Aerospace Robotics Laboratoryにおける
+            研究留学を開始しました．
+          </div>
+
+        </li>
+
+
+        <li class="news-item">
+
+          <time
+            class="news-date"
+            datetime="2025-02-28"
+          >
+            2025.02.28
+          </time>
+
+          <a
+            href="about.html"
+            class="news-category news-category-career"
+          >
+            Career
+          </a>
+
+          <div class="news-content">
+            株式会社ispaceにおける6か月間の
+            長期インターンシップを修了しました．
+          </div>
+
+        </li>
+
+
+        <li class="news-item">
+
+          <time
+            class="news-date"
+            datetime="2025-02-15"
+          >
+            2025.02.15
+          </time>
+
+          <a
+            href="publications.html"
+            class="news-category news-category-publication"
+          >
+            Publication
+          </a>
+
+          <div class="news-content">
+            <em>Journal of Terramechanics</em>
+            に筆頭著者論文が掲載されました．
+          </div>
+
+        </li>
+
+
+        <li class="news-item">
+
+          <time
+            class="news-date"
+            datetime="2025-01-25"
+          >
+            2025.01.25
+          </time>
+
+          <a
+            href="about.html"
+            class="news-category news-category-funding"
+          >
+            Funding
+          </a>
+
+          <div class="news-content">
+            カナダにおける国際共同研究に対し，
+            <strong>Mitacs Globalink Research Award</strong>
+            に採択されました．
+          </div>
+
+        </li>
+
+
+        <li class="news-item">
+
+          <time
+            class="news-date"
+            datetime="2025-01-20"
+          >
+            2025.01.20
+          </time>
+
+          <a
+            href="publications.html"
+            class="news-category news-category-publication"
+          >
+            Publication
+          </a>
+
+          <div class="news-content">
+            <em>Aerospace</em>
+            に筆頭著者論文が掲載されました．
+          </div>
+
+        </li>
+
+      </ul>
+
+
+      <!-- =================================================
+           2024
+           ================================================= -->
+
+      <h3 class="news-year">
+        2024
+      </h3>
+
+      <ul class="news-list">
+
+        <li class="news-item">
+
+          <time
+            class="news-date"
+            datetime="2024-12-23"
+          >
+            2024.12.23
+          </time>
+
+          <a
+            href="publications.html"
+            class="news-category news-category-publication"
+          >
+            Publication
+          </a>
+
+          <div class="news-content">
+            <em>Journal of Evolving Space Activities</em>
+            に筆頭著者論文が掲載されました．
+          </div>
+
+        </li>
+
+
+        <li class="news-item">
+
+          <time
+            class="news-date"
+            datetime="2024-10-31"
+          >
+            2024.10.31
+          </time>
+
+          <a
+            href="talks.html"
+            class="news-category news-category-talk"
+          >
+            Talk
+          </a>
+
+          <div class="news-content">
+            国際会議
+            <em>ISTVS 2024</em>
+            にて，研究発表1件を行いました．
+          </div>
+
+        </li>
+
+
+        <li class="news-item">
+
+          <time
+            class="news-date"
+            datetime="2024-08-10"
+          >
+            2024.08.10
+          </time>
+
+          <a
+            href="about.html"
+            class="news-category news-category-teaching"
+          >
+            Teaching
+          </a>
+
+          <div class="news-content">
+            Tohoku University Engineering Summer Program
+            （TESP 2024）において，
+            アドミニストレイティブアシスタントとして活動しました．
+          </div>
+
+        </li>
+
+
+        <li class="news-item">
+
+          <time
+            class="news-date"
+            datetime="2024-07-15"
+          >
+            2024.07.15
+          </time>
+
+          <a
+            href="publications.html"
+            class="news-category news-category-publication"
+          >
+            Publication
+          </a>
+
+          <div class="news-content">
+            国際会議
+            <em>ISTVS 2024</em>
+            にて，筆頭著者論文2件を含む3件の論文が採択されました．
+          </div>
+
+        </li>
+
+
+        <li class="news-item">
+
+          <time
+            class="news-date"
+            datetime="2024-05-01"
+          >
+            2024.05.01
+          </time>
+
+          <a
+            href="about.html"
+            class="news-category news-category-funding"
+          >
+            Funding
+          </a>
+
+          <div class="news-content">
+            日本学術振興会特別研究員奨励費
+            「車輪牽引性能にもとづく動力学的テラメカニクス理論の新構築」
+            による研究を開始しました．
+          </div>
+
+        </li>
+
+
+        <li class="news-item">
+
+          <time
+            class="news-date"
+            datetime="2024-04-01"
+          >
+            2024.04.01
+          </time>
+
+          <a
+            href="about.html"
+            class="news-category news-category-career"
+          >
+            Career
+          </a>
+
+          <div class="news-content">
+            <strong>日本学術振興会特別研究員DC1</strong>としての研究活動を開始しました．
+          </div>
+
+        </li>
+
+
+        <li class="news-item">
+
+          <time
+            class="news-date"
+            datetime="2024-03-31"
+          >
+            2024.03.31
+          </time>
+
+          <a
+            href="about.html"
+            class="news-category news-category-funding"
+          >
+            Funding
+          </a>
+
+          <div class="news-content">
+            東北大学次世代研究者挑戦的研究プログラムによる研究活動を終了しました．
+          </div>
+
+        </li>
+
+                <li class="news-item">
+
+          <time
+            class="news-date"
+            datetime="2024-03-29"
+          >
+            2024.03.29
+          </time>
+
+          <a
+            href="media.html"
+            class="news-category news-category-media"
+          >
+            Media
+          </a>
+
+          <div class="news-content">
+            工学研究科長賞の受賞が東北大学工学研究科および東北大学機械系の各HPにて紹介されました．
+          </div>
+
+
+
+        <li class="news-item">
+
+          <time
+            class="news-date"
+            datetime="2024-03-25"
+          >
+            2024.03.25
+          </time>
+
+          <a
+            href="about.html"
+            class="news-category news-category-award"
+          >
+            Award
+          </a>
+
+          <div class="news-content">
+            <strong>東北大学 工学研究科長賞</strong>
+            を受賞しました．
+          </div>
+
+        </li>
+
+
+        <li class="news-item">
+
+          <time
+            class="news-date"
+            datetime="2024-01-01"
+          >
+            2024.01.01
+          </time>
+
+          <a
+            href="index.html"
+            class="news-category news-category-website"
+          >
+            Website
+          </a>
+
+          <div class="news-content">
+            研究者ホームページを開設しました．
+          </div>
+
+        </li>
+
+      </ul>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+       Footer
+       ===================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="site-footer-inner">
+
+      <div>
+        © 2026 Keisuke Takehana. All rights reserved.
+      </div>
+
+      <div class="footer-links no-print">
+
+        <a href="contact.html">
+          Contact
+        </a>
+
+        <button
+          type="button"
+          onclick="window.print()"
+        >
+          印刷 / PDF保存
+        </button>
+
+      </div>
+
     </div>
-  </div>
-</footer>
-<script>
-  const menuBtn = document.getElementById('menuBtn');
-  const mobileNav = document.getElementById('mobileNav');
-  if (menuBtn && mobileNav) { menuBtn.addEventListener('click', () => {
-    const open = mobileNav.classList.toggle('hidden') === false;
-    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });}
-  const themeBtn = document.getElementById('themeBtn');
-  const root = document.documentElement;
-  if (themeBtn) { 
-    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (prefersDark) root.classList.add('dark');
-    themeBtn.textContent = root.classList.contains('dark') ? 'ライト モード' : 'ダーク モード';
-    themeBtn.addEventListener('click', () => {
-      root.classList.toggle('dark');
-      themeBtn.textContent = root.classList.contains('dark') ? 'ライト モード' : 'ダーク モード';
-    });
-  }
-</script>
-<style>:root{scroll-padding-top:80px} body{padding-top:72px}</style>
+
+  </footer>
+
+  <script src="script.js"></script>
 
 </body>
+
 </html>

@@ -1,107 +1,372 @@
 <!DOCTYPE html>
 <html lang="ja" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Projects - Researcher Website</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <meta name="color-scheme" content="light dark" />
-  <style>@media print{ .no-print{ display:none !important; } }</style>
+
+  <title>Projects - Keisuke Takehana</title>
+
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="bg-gray-50 text-gray-800 dark:bg-neutral-900 dark:text-neutral-100">
-  <header class="bg-white dark:bg-neutral-900 border-b border-gray-200 dark:border-neutral-800 sticky top-0 z-50">
-  <div class="max-w-5xl mx-auto px-4">
-    <div class="h-14 flex items-center justify-between">
-      <a href="index.html" class="font-bold">Keisuke Takehana, Ph.D.</a>
 
+<body>
 
-      <nav class="hidden sm:flex gap-4 text-sm">
-        <a href="index.html" class="hover:opacity-80">Home</a> 
-        <a href="news.html" class="hover:opacity-80">News</a> 
-        <a href="about.html" class="hover:opacity-80">About Me</a> 
-        <a href="publications.html" class="hover:opacity-80">Publications</a> 
-        <a href="projects.html" class="hover:opacity-80 text-blue-600 font-semibold">Projects</a> 
-        <a href="talks.html" class="hover:opacity-80">Talks</a> 
-        <a href="media.html" class="hover:opacity-80">Media</a> 
-        <a href="contact.html" class="hover:opacity-80">Contact</a></nav>
-      
-      <div class="flex items-center gap-2">
-        <a href="projects_en.html" class="text-xs px-2 py-1 rounded border border-gray-300 dark:border-neutral-700 hover:bg-gray-50 dark:hover:bg-neutral-800">English</a>
-        <button id="menuBtn" class="sm:hidden inline-flex items-center justify-center w-10 h-10 rounded-md border border-gray-300 dark:border-neutral-700" aria-expanded="false" aria-controls="mobileNav" aria-label="メニュー">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+  <!-- =====================================================
+       Header
+       ===================================================== -->
+
+  <header class="site-header">
+
+    <div class="site-header-inner">
+
+      <a href="index.html" class="site-name">
+        Keisuke Takehana, Ph.D.
+      </a>
+
+      <nav
+        class="desktop-nav"
+        aria-label="メインナビゲーション"
+      >
+        <a href="index.html">Home</a>
+        <a href="news.html">News</a>
+        <a href="about.html">About Me</a>
+        <a href="publications.html">Publications</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="talks.html">Talks</a>
+        <a href="media.html">Media</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="header-controls">
+
+        <a href="projects_en.html" class="language-link">
+          English
+        </a>
+
+        <button
+          id="menuBtn"
+          class="menu-button"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobileNav"
+          aria-label="メニューを開く"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
         </button>
+
       </div>
+
     </div>
 
-    <nav id="mobileNav" class="sm:hidden hidden flex-col gap-2 pb-3 text-sm" role="menu">
-      <a href="index.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">Home</a> 
-      <a href="news.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">News</a> 
-      <a href="about.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">About Me</a> 
-      <a href="publications.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">Publications</a> 
-      <a href="projects.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800 bg-gray-100 dark:bg-neutral-800 font-semibold">Projects</a> 
-      <a href="talks.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">Talks</a> 
-      <a href="media.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">Media</a> 
-      <a href="contact.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">Contact</a>  
-      
-      <div class="pt-2"><a href="projects_en.html" class="text-xs px-2 py-1 rounded border border-gray-300 dark:border-neutral-700 hover:bg-gray-50 dark:hover:bg-neutral-800">English</a></div>
+    <!-- Mobile navigation -->
+
+    <nav
+      id="mobileNav"
+      class="mobile-nav"
+      aria-label="モバイルナビゲーション"
+    >
+      <a href="index.html">Home</a>
+      <a href="news.html">News</a>
+      <a href="about.html">About Me</a>
+      <a href="publications.html">Publications</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="talks.html">Talks</a>
+      <a href="media.html">Media</a>
+      <a href="contact.html">Contact</a>
+
+      <div class="mobile-language">
+        <a href="projects_en.html" class="language-link">
+          English
+        </a>
+      </div>
+
     </nav>
-  </div>
-</header>
+
+  </header>
 
 
-    <!--<main class="max-w-5xl mx-auto px-4 py-10">
-    <h2 class="text-2xl font-bold mb-6">研究プロジェクト</h2>
-    <div class="grid gap-4 sm:grid-cols-2">
-      <div class="p-4 rounded-2xl bg-white dark:bg-neutral-900 border border-gray-200 dark:border-neutral-800 shadow-sm">
-        <h3 class="font-semibold">高速単輪試験装置の開発</h3>
-        <p class="text-sm text-gray-600 dark:text-neutral-300">2023 — 最大5 m/sの回転速度に対応</p>
-      </div>><div class="p-4 rounded-2xl bg-white dark:bg-neutral-900 border border-gray-200 dark:border-neutral-800 shadow-sm">
-        <h3 class="font-semibold">RFTベースの走行力予測</h3>
-        <p class="text-sm text-gray-600 dark:text-neutral-300">2024 — 速度依存拡張による予測</p>
+  <!-- =====================================================
+       Main content
+       ===================================================== -->
+
+  <main class="site-main">
+
+    <h1 class="page-title">Projects</h1>
+
+
+    <!-- ===================================================
+         Introductory section
+         =================================================== -->
+
+    <section class="page-section">
+
+      <h2 class="section-title">
+        Research Projects
+      </h2>
+
+      <p class="text-muted">
+        本ページでは、現在取り組んでいる研究プロジェクトおよび
+        これまでに実施した研究内容を紹介する予定です。
+      </p>
+<!--
+      <p class="text-muted">
+        研究概要、技術的背景、研究成果、関連論文、実験装置、
+        動画および共同研究等の情報を順次掲載します。
+      </p>-->
+
+      <span class="status-label">
+        Under Construction
+      </span>
+
+    </section>
+
+
+    <!-- ===================================================
+         Future project cards
+         公開時点ではコメントアウト
+         =================================================== -->
+
+    <!--
+
+    <section class="page-section">
+
+      <h2 class="section-title">
+        Current Projects
+      </h2>
+
+      <div class="card-grid">
+
+        <article class="content-card">
+
+          <img
+            src="img/projects/project01.jpg"
+            alt="研究プロジェクトの画像"
+            class="research-image"
+          />
+
+          <h3 class="card-title">
+            プロジェクト名
+          </h3>
+
+          <p>
+            プロジェクトの概要を記載します。
+            研究目的、対象とする課題、使用する技術、
+            期待される成果等を簡潔に説明します。
+          </p>
+
+          <p>
+            <strong>Keywords:</strong>
+            Space Robotics, Navigation, LiDAR
+          </p>
+
+          <a
+            href="project01.html"
+            class="publication-title"
+          >
+            詳細を見る
+          </a>
+
+        </article>
+
+
+        <article class="content-card">
+
+          <img
+            src="img/projects/project02.jpg"
+            alt="研究プロジェクトの画像"
+            class="research-image"
+          />
+
+          <h3 class="card-title">
+            プロジェクト名
+          </h3>
+
+          <p>
+            プロジェクトの概要を記載します。
+            研究対象、実験内容、研究手法および成果等を
+            簡潔に紹介します。
+          </p>
+
+          <p>
+            <strong>Keywords:</strong>
+            Planetary Rover, Terramechanics
+          </p>
+
+          <a
+            href="project02.html"
+            class="publication-title"
+          >
+            詳細を見る
+          </a>
+
+        </article>
+
       </div>
-    </div>
-  </main>
- -->
 
-  <main class="max-w-5xl mx-auto px-4 py-10">
-  <section class="mb-8">
-    <h3 class="text-xl font-semibold mb-3">研究プロジェクト</h3>
-    <ol class="list-decimal pl-5 space-y-1">
-       <li>Coming soon</li>
-  
-    </ol>
-  </section>
+    </section>
+
+    -->
+
+
+    <!-- ===================================================
+         Suggested future project categories
+         必要になった際にコメントを外して使用
+         =================================================== -->
+
+    <!--
+
+    <section class="page-section">
+
+      <h2 class="section-title">
+        Research Areas
+      </h2>
+
+      <div class="card-grid">
+
+        <article class="content-card">
+
+          <h3 class="card-title">
+            On-Orbit Servicing
+          </h3>
+
+          <p>
+            非協力宇宙機に対する接近、相対航法、運動推定、
+            デタンブリング、捕獲および地上検証に関する研究を紹介します。
+          </p>
+
+        </article>
+
+
+        <article class="content-card">
+
+          <h3 class="card-title">
+            Space Navigation and LiDAR
+          </h3>
+
+          <p>
+            可視光、熱赤外およびFMCW-LiDARを用いた
+            宇宙機の相対航法・誘導技術に関する研究を紹介します。
+          </p>
+
+        </article>
+
+
+        <article class="content-card">
+
+          <h3 class="card-title">
+            Planetary Rover
+          </h3>
+
+          <p>
+            月・惑星探査ローバーの走行性能、
+            車輪設計および砂地走行に関する研究を紹介します。
+          </p>
+
+        </article>
+
+
+        <article class="content-card">
+
+          <h3 class="card-title">
+            Terramechanics
+          </h3>
+
+          <p>
+            車輪と土壌の相互作用、単輪試験、
+            数値シミュレーションおよびデータ駆動型モデルに関する
+            研究を紹介します。
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+    -->
+
+
+    <!-- ===================================================
+         Related publications
+         必要になった際にコメントを外して使用
+         =================================================== -->
+
+    <!--
+
+    <section class="page-section">
+
+      <h2 class="section-title">
+        Related Publications
+      </h2>
+
+      <p>
+        各研究プロジェクトに関連する論文は、
+        Publicationsページに掲載しています。
+      </p>
+
+      <a
+        href="publications.html"
+        class="publication-title"
+      >
+        Publicationsを見る
+      </a>
+
+    </section>
+
+    -->
+
   </main>
 
-<footer class="border-t border-gray-200 dark:border-neutral-800 py-8 mt-4">
-  <div class="max-w-5xl mx-auto px-4 text-sm text-gray-600 dark:text-neutral-400 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-    <div>© 2025 Keisuke Takehana. All rights reserved.</div>
-    <div class="flex gap-4 no-print">
-      <a class="underline" href="contact.html">Contact</a>
-      <button class="underline" onclick="window.print()">印刷 / PDF保存</button>
+
+  <!-- =====================================================
+       Footer
+       ===================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="site-footer-inner">
+
+      <div>
+        © 2026 Keisuke Takehana. All rights reserved.
+      </div>
+
+      <div class="footer-links no-print">
+
+        <a href="contact.html">
+          Contact
+        </a>
+
+        <button
+          type="button"
+          onclick="window.print()"
+        >
+          印刷 / PDF保存
+        </button>
+
+      </div>
+
     </div>
-  </div>
-</footer>
-<script>
-  const menuBtn = document.getElementById('menuBtn');
-  const mobileNav = document.getElementById('mobileNav');
-  if (menuBtn && mobileNav) { menuBtn.addEventListener('click', () => {
-    const open = mobileNav.classList.toggle('hidden') === false;
-    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });}
-  const themeBtn = document.getElementById('themeBtn');
-  const root = document.documentElement;
-  if (themeBtn) { 
-    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (prefersDark) root.classList.add('dark');
-    themeBtn.textContent = root.classList.contains('dark') ? 'ライト モード' : 'ダーク モード';
-    themeBtn.addEventListener('click', () => {
-      root.classList.toggle('dark');
-      themeBtn.textContent = root.classList.contains('dark') ? 'ライト モード' : 'ダーク モード';
-    });
-  }
-</script>
-<style>:root{scroll-padding-top:80px} body{padding-top:72px}</style>
+
+  </footer>
+
+  <script src="script.js"></script>
 
 </body>
+
 </html>

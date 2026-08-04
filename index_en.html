@@ -1,191 +1,508 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Index - Researcher Website</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <meta name="color-scheme" content="light dark" />
-  <style>@media print{ .no-print{ display:none !important; } }</style>
+
+  <title>Keisuke Takehana - Space Robotics Researcher</title>
+
+  <meta
+    name="description"
+    content="Official researcher website of Keisuke Takehana. His research focuses on space robotics, on-orbit servicing, planetary exploration rovers, and terramechanics."
+  />
+
+  <meta
+    name="google-site-verification"
+    content="TGb8jWQ6gb92qD5tsyJKcT804R5m8AKATvfO-LJUVlE"
+  />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="bg-gray-50 text-gray-800 dark:bg-neutral-900 dark:text-neutral-100">
-  <header class="bg-white dark:bg-neutral-900 border-b border-gray-200 dark:border-neutral-800 sticky top-0 z-50">
-  <div class="max-w-5xl mx-auto px-4">
-    <div class="h-14 flex items-center justify-between">
-      <a href="index_en.html" class="font-bold">Keisuke Takehana, Ph.D.</a>
 
-      <nav class="hidden sm:flex gap-4 text-sm">
-        <a href="index_en.html" class="hover:opacity-80 text-blue-600 font-semibold">Home</a> 
-        <a href="news_en.html" class="hover:opacity-80">News</a> 
-        <a href="about_en.html" class="hover:opacity-80">About Me</a> 
-        <a href="publications_en.html" class="hover:opacity-80">Publications</a> 
-        <a href="projects_en.html" class="hover:opacity-80">Projects</a> 
-        <a href="talks_en.html" class="hover:opacity-80">Talks</a> 
-        <a href="media_en.html" class="hover:opacity-80">Media</a> 
-        <a href="contact_en.html" class="hover:opacity-80">Contact</a></nav>      
-      
-      <div class="flex items-center gap-2">
-        <a href="index.html" class="text-xs px-2 py-1 rounded border border-gray-300 dark:border-neutral-700 hover:bg-gray-50 dark:hover:bg-neutral-800">日本語</a>
-        <button id="menuBtn" class="sm:hidden inline-flex items-center justify-center w-10 h-10 rounded-md border border-gray-300 dark:border-neutral-700" aria-expanded="false" aria-controls="mobileNav" aria-label="メニュー">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+<body>
+
+  <!-- =====================================================
+       Header
+       ===================================================== -->
+
+  <header class="site-header">
+
+    <div class="site-header-inner">
+
+      <a href="index_en.html" class="site-name">
+        Keisuke Takehana, Ph.D.
+      </a>
+
+      <nav
+        class="desktop-nav"
+        aria-label="Main navigation"
+      >
+        <a href="index_en.html" class="active">Home</a>
+        <a href="news_en.html">News</a>
+        <a href="about_en.html">About Me</a>
+        <a href="publications_en.html">Publications</a>
+        <a href="projects_en.html">Projects</a>
+        <a href="talks_en.html">Talks</a>
+        <a href="media_en.html">Media</a>
+        <a href="contact_en.html">Contact</a>
+      </nav>
+
+      <div class="header-controls">
+
+        <a href="index.html" class="language-link">
+          日本語
+        </a>
+
+        <button
+          id="menuBtn"
+          class="menu-button"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobileNav"
+          aria-label="Open menu"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
         </button>
+
       </div>
+
     </div>
-    <nav id="mobileNav" class="sm:hidden hidden flex-col gap-2 pb-3 text-sm" role="menu">
-      <a href="index_en.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800 bg-gray-100 dark:bg-neutral-800 font-semibold">Home</a> 
-      <a href="news_en.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">News</a> 
-      <a href="about_en.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">About Me</a> 
-      <a href="publications_en.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">Publications</a> 
-      <a href="projects_en.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">Projects</a> 
-      <a href="talks_en.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">Talks</a> 
-      <a href="media_en.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">Media</a> 
-      <a href="contact_en.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">Contact</a>
-           
-      
-      <div class="pt-2"><a href="index.html" class="text-xs px-2 py-1 rounded border border-gray-300 dark:border-neutral-700 hover:bg-gray-50 dark:hover:bg-neutral-800">日本語</a></div>
+
+    <!-- Mobile navigation -->
+
+    <nav
+      id="mobileNav"
+      class="mobile-nav"
+      aria-label="Mobile navigation"
+    >
+      <a href="index_en.html" class="active">Home</a>
+      <a href="news_en.html">News</a>
+      <a href="about_en.html">About Me</a>
+      <a href="publications_en.html">Publications</a>
+      <a href="projects_en.html">Projects</a>
+      <a href="talks_en.html">Talks</a>
+      <a href="media_en.html">Media</a>
+      <a href="contact_en.html">Contact</a>
+
+      <div class="mobile-language">
+        <a href="index.html" class="language-link">
+          日本語
+        </a>
+      </div>
+
     </nav>
-  </div>
-</header>
+
+  </header>
 
 
-  <section class="border-b border-gray-200 dark:border-neutral-800 bg-gradient-to-b from-gray-100 to-white dark:from-neutral-950 dark:to-neutral-900">
-    
-    <div class="max-w-5xl mx-auto px-4 py-10 sm:py-16">
-      <div class="flex flex-col sm:flex-row sm:items-center gap-6">
-        
-        <img src="img/SRL-logo.png" alt="Your portrait" class="w-28 h-28 rounded-2xl object-cover shadow" />
-       
-        <div class="flex-1">
-          <!--<h1 class="text-3xl font-extrabold tracking-tight">Keisuke Takehana, Ph.D.</h1>
-          <p class="mt-1 text-gray-600 dark:text-neutral-300">助教 / 博士 (工学) ・ 〇〇大学 △△研究室</p> -->
-          <h1 class="text-3xl font-extrabold tracking-tight">Keisuke Takehana  &nbsp;&nbsp;&nbsp;<small>Ph.D. (Engineering)</small></h1>
-          <p class="mt-1 text-gray-600 dark:text-neutral-300">Research Fellow, Space Robotics Lab (Prof. Yoshida's Lab), 
-            Department of Aerospace Engineering, Tohoku University</p>          
-            <div class="flex flex-wrap gap-2 mt-3">
-              <span class="text-xs px-2 py-1 rounded-full bg-gray-200 dark:bg-neutral-800">Planetary Robotics</span>
-              <span class="text-xs px-2 py-1 rounded-full bg-gray-200 dark:bg-neutral-800">Field Robotics</span>
-              <span class="text-xs px-2 py-1 rounded-full bg-gray-200 dark:bg-neutral-800">Terramechanics</span>
-            </div>
+  <!-- =====================================================
+       Main content
+       ===================================================== -->
+
+  <main class="site-main home-page">
+
+
+    <!-- ===================================================
+         Hero
+         =================================================== -->
+
+    <section class="home-hero">
+
+      <div class="home-hero-profile">
+
+        <img
+          src="img/siel_logo.png"
+          alt="Profile image of Keisuke Takehana"
+          class="home-profile-image"
+        />
+
+        <div class="home-hero-content">
+
+          <p class="home-eyebrow">
+            Space Robotics Researcher
+          </p>
+
+          <h1 class="home-name">
+            Keisuke Takehana
+            <span class="home-degree">
+              Ph.D. in Engineering
+            </span>
+          </h1>
+
+          <p class="home-position">
+            Specially Appointed Assistant Professor,<br>
+            Green Cross-Tech Research Center,
+            Green Goals Initiative, Tohoku University
+          </p>
+
+          <p class="home-affiliation">
+            Department of Aerospace Engineering,
+            Graduate School of Engineering, Tohoku University<br>
+            Space Infrastructure Engineering Laboratory
+          </p>
+
+          <div class="home-keywords" aria-label="Research keywords">
+            <span>Space Robotics</span>
+            <span>On-Orbit Servicing</span>
+            <span>Planetary Exploration Rovers</span>
+            <span>Terramechanics</span>
+          </div>
+
+          <div class="home-profile-links">
+
+            <a
+              href="https://scholar.google.com/citations?user=8pN0LNAAAAAJ"
+              class="home-profile-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Google Scholar
+            </a>
+
+            <a
+              href="https://researchmap.jp/k-tkhn?lang=en"
+              class="home-profile-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              researchmap
+            </a>
+
+            <a
+              href="contact_en.html"
+              class="home-profile-link"
+            >
+              Contact
+            </a>
+
+          </div>
+
         </div>
-      
-<!-- ここにコメントとして残したい内容 
-        <div class="flex sm:flex-col gap-2 no-print">
-          <a href="cv.pdf" class="px-3 py-2 rounded-xl bg-black text-white text-sm hover:opacity-90 dark:bg-white dark:text-black">CV を見る</a>
-          <button id="themeBtn" class="px-3 py-2 rounded-xl border text-sm border-gray-300 dark:border-neutral-700">ダーク モード</button>
-        </div>
--->
-
 
       </div>
-      <div class="mt-6 text-sm text-gray-600 dark:text-neutral-300">Keisuke Takehana is a Research Fellow in Space Robotics Laboratory at Tohoku University. 
-        His research interests include planetary exploration robots and uneven terrain mobile robots. His main research area is terramechanics. 
-        He conducts experimental research that contributes to the development of wheeled locomotion mechanisms, wheel design, performance evaluation, and driving control.
-       <br> [<a href="https://scholar.google.com/citations?user=8pN0LNAAAAAJ&hl=ja" target="_blank" rel="noopener noreferrer" class="underline text-blue-600 hover:text-blue-800">Google Scholar</a>]
-      &nbsp;&nbsp;&nbsp; [<a href="https://researchmap.jp/k-tkhn" target="_blank" rel="noopener noreferrer" class="underline text-blue-600 hover:text-blue-800">researchmap</a>]
-    
+
+      <div class="home-introduction">
+
+        <p>
+          His research focuses on space robotics, including the mobility mechanics
+          and terramechanics of lunar and planetary exploration rovers, as well as
+          on-orbit servicing technologies for uncooperative spacecraft.
+        </p>
+
       </div>
-    </div>
-  </section>
-  
-  <main class="max-w-5xl mx-auto px-4 py-10 grid gap-4 sm:grid-cols-2">
+
+    </section>
 
 
-  <article class="p-4 rounded-2xl bg-white dark:bg-neutral-900 border border-gray-200 dark:border-neutral-800 shadow-sm sm:col-span-2">
-    <h2 class="font-semibold mb-3">News</h2>
-    <ul class="list-disc pl-5 space-y-2 text-sm text-gray-600 dark:text-neutral-300">
-      <li>
-        <strong>2025.10.10:</strong> [NEW!] The first-author paper "High-Speed Wheel Performance Linear Regression Modeling on Loose Terrain Based on Single-Wheel Experiment" and one co-authored paper were accepted at the International Conference on Space Robotics (iSpaRo).
-      </li>  
-      <li>
-        <strong>2025.10.01:</strong> [NEW!] I will continue my research as a JSPS Postdoctoral Research Fellow (PD) at the Space Robotics Laboratory (Prof. Yoshida's Lab), Department of Aerospace Engineering, Graduate School of Engineering, Tohoku University.
-      </li>
-      <li>
-        <strong>2025.09.25:</strong> I was awarded the degree of Doctor of Engineering (Ph.D.). My two-year doctoral research at Tohoku University has been completed.<br>
-      </li>   
-      <li>
-        <strong>2024.08.10:</strong> The first-author paper "<a href="https://doi.org/10.1016/j.jterra.2025.101084" class="underline font-bold"
-        target="_blank" rel="noopener noreferrer">Grouser Wheel High-Speed Traction Performance: DEM Simulation and Experimental Result</a>"
-        has been accepted for publication in the Journal of Terramechanics.
-      </li>     
-      <li>
-        <strong>For more news:</strong>
-        <a href="news_en.html" class="text-sm underline mt-2 inline-block">View all News</a>
-      </li>
-    
-    </ul>
-  </article>
+    <!-- ===================================================
+         Latest News
+         =================================================== -->
+
+    <section class="page-section">
+
+      <div class="section-heading-row">
+
+        <h2 class="section-title">
+          Latest News
+        </h2>
+
+        <a href="news_en.html" class="section-more-link">
+          View All News
+        </a>
+
+      </div>
+
+      <ul class="home-news-list">
+
+        <li class="home-news-item">
+
+          <time datetime="2026-07-31" class="home-news-date">
+            2026.07.31
+          </time>
+
+          <span class="news-category news-category-funding">
+            Funding
+          </span>
+
+          <div class="home-news-content">
+            Completed the research project supported by the
+            JSPS KAKENHI Grant-in-Aid for JSPS Fellows.
+          </div>
+
+        </li>
+
+        <li class="home-news-item">
+
+          <time datetime="2026-07-16" class="home-news-date">
+            2026.07.16
+          </time>
+
+          <span class="news-category news-category-service">
+            Service
+          </span>
+
+          <div class="home-news-content">
+            A special session on intelligent space robotics proposed for
+            SII 2027 was accepted.
+          </div>
+
+        </li>
+
+        <li class="home-news-item">
+
+          <time datetime="2026-05-29" class="home-news-date">
+            2026.05.29
+          </time>
+
+          <span class="news-category news-category-talk">
+            Talk
+          </span>
+
+          <div class="home-news-content">
+            Delivered a talk and participated in an international panel discussion
+            at RENKEI ECR COLLABORATION LAB 2026.
+          </div>
+
+        </li>
+
+        <li class="home-news-item">
+
+          <time datetime="2026-03-25" class="home-news-date">
+            2026.03.25
+          </time>
+
+          <span class="news-category news-category-award">
+            Award
+          </span>
+
+          <div class="home-news-content">
+            Received the Tohoku University President’s Award.
+          </div>
+
+        </li>
+
+      </ul>
+
+    </section>
 
 
-    <article class="p-4 rounded-2xl bg-white dark:bg-neutral-900 border border-gray-200 dark:border-neutral-800 shadow-sm">
-      <h2 class="font-semibold mb-1">Biography</h2>
-      <p class="text-sm text-gray-600 dark:text-neutral-300">Present: Research Fellow at Space Robotics Lab</p>
-      <a href="about_en.html" class="text-sm underline mt-2 inline-block">View About Me</a>
-    </article>
+    <!-- ===================================================
+         Research Interests
+         =================================================== -->
 
-    <article class="p-4 rounded-2xl bg-white dark:bg-neutral-900 border border-gray-200 dark:border-neutral-800 shadow-sm">
-      <h2 class="font-semibold mb-1">Publications</h2>
-      <p class="text-sm text-gray-600 dark:text-neutral-300">New: Accepted in Journal of Terramechanics</p>
-      <a href="publications_en.html" class="text-sm underline mt-2 inline-block">View Publications</a>
-    </article>
+    <section class="page-section">
 
-    <article class="p-4 rounded-2xl bg-white dark:bg-neutral-900 border border-gray-200 dark:border-neutral-800 shadow-sm">
-      <h2 class="font-semibold mb-1">Research Projects</h2>
-      <p class="text-sm text-gray-600 dark:text-neutral-300">Coming soon</p>
-      <a href="projects_en.html" class="text-sm underline mt-2 inline-block">View Projects</a>
-    </article>
+      <h2 class="section-title">
+        Research Interests
+      </h2>
 
-    <article class="p-4 rounded-2xl bg-white dark:bg-neutral-900 border border-gray-200 dark:border-neutral-800 shadow-sm">
-      <h2 class="font-semibold mb-1">Invited Talks</h2>
-      <p class="text-sm text-gray-600 dark:text-neutral-300">Coming soon</p>
-      <a href="talks_en.html" class="text-sm underline mt-2 inline-block">View Talks</a>
-    </article>
+      <div class="card-grid">
 
+        <article class="content-card">
 
-    <article class="p-4 rounded-2xl bg-white dark:bg-neutral-900 border border-gray-200 dark:border-neutral-800 shadow-sm">
-      <h2 class="font-semibold mb-1">Media and Outreach</h2>
-      <p class="text-sm text-gray-600 dark:text-neutral-300">Coming soon</p>
-      <a href="media_en.html" class="text-sm underline mt-2 inline-block">View Media</a>
-    </article>
+          <h3 class="card-title">
+            Space Robotics
+          </h3>
+
+          <p>
+            Autonomous robotic systems for space environments,
+            including perception, estimation, control, and ground verification.
+          </p>
+
+        </article>
 
 
-    <article class="p-4 rounded-2xl bg-white dark:bg-neutral-900 border border-gray-200 dark:border-neutral-800 shadow-sm">
-      <h2 class="font-semibold mb-1">Contact</h2>
-      <p class="text-sm text-gray-600 dark:text-neutral-300">Space Robotics Laboratory at Tohoku University, Japan</p>
-      <a href="contact_en.html" class="text-sm underline mt-2 inline-block">View Contact</a>
-    </article>
+        <article class="content-card">
+
+          <h3 class="card-title">
+            On-Orbit Servicing
+          </h3>
+
+          <p>
+            Proximity operations, relative navigation, motion estimation,
+            detumbling, and capture of uncooperative spacecraft.
+          </p>
+
+        </article>
+
+
+        <!--
+        <article class="content-card">
+
+          <h3 class="card-title">
+            Space Navigation and LiDAR
+          </h3>
+
+          <p>
+            Relative navigation and guidance using visible-light and thermal
+            infrared cameras, as well as FMCW LiDAR.
+          </p>
+
+        </article>
+        -->
+
+
+        <article class="content-card">
+
+          <h3 class="card-title">
+            Planetary Rovers
+          </h3>
+
+          <p>
+            Mobility systems, wheel design, and off-road performance
+            of lunar and planetary exploration rovers.
+          </p>
+
+        </article>
+
+
+        <article class="content-card">
+
+          <h3 class="card-title">
+            Terramechanics
+          </h3>
+
+          <p>
+            Wheel–soil interaction, single-wheel testing,
+            numerical simulation, and data-driven modeling.
+          </p>
+
+        </article>
+
+
+        <!--
+        <article class="content-card">
+
+          <h3 class="card-title">
+            Field Robotics
+          </h3>
+
+          <p>
+            Measurement, performance evaluation, and control of mobile robots
+            operating in uncertain natural environments.
+          </p>
+
+        </article>
+        -->
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         Explore
+         =================================================== -->
+
+    <section class="page-section">
+
+      <h2 class="section-title">
+        Explore
+      </h2>
+
+      <div class="home-link-grid">
+
+        <a href="about_en.html" class="home-link-card">
+          <span class="home-link-title">About Me</span>
+          <span class="home-link-description">
+            Education, professional experience, awards,
+            research funding, and academic service
+          </span>
+        </a>
+
+        <a href="publications_en.html" class="home-link-card">
+          <span class="home-link-title">Publications</span>
+          <span class="home-link-description">
+            Journal papers, international conference papers,
+            and domestic conference papers
+          </span>
+        </a>
+
+        <a href="projects_en.html" class="home-link-card">
+          <span class="home-link-title">Projects</span>
+          <span class="home-link-description">
+            Research projects and research and development activities
+          </span>
+        </a>
+
+        <a href="talks_en.html" class="home-link-card">
+          <span class="home-link-title">Talks</span>
+          <span class="home-link-description">
+            Conference presentations, invited talks,
+            and panel discussions
+          </span>
+        </a>
+
+        <a href="media_en.html" class="home-link-card">
+          <span class="home-link-title">Media</span>
+          <span class="home-link-description">
+            University news, award features, and media coverage
+          </span>
+        </a>
+
+        <a href="contact_en.html" class="home-link-card">
+          <span class="home-link-title">Contact</span>
+          <span class="home-link-description">
+            Affiliation, address, and email
+          </span>
+        </a>
+
+      </div>
+
+    </section>
+
   </main>
-  
 
-  
-<footer class="border-t border-gray-200 dark:border-neutral-800 py-8 mt-4">
-  <div class="max-w-5xl mx-auto px-4 text-sm text-gray-600 dark:text-neutral-400 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-    <div>© 2025 Keisuke Takehana. All rights reserved.</div>
-    <div class="flex gap-4 no-print">
-      <a class="underline" href="contact_en.html">Contact</a>
-      <button class="underline" onclick="window.print()">Print / PDF</button>
+
+  <!-- =====================================================
+       Footer
+       ===================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="site-footer-inner">
+
+      <div>
+        © 2026 Keisuke Takehana. All rights reserved.
+      </div>
+
+      <div class="footer-links no-print">
+
+        <a href="contact_en.html">
+          Contact
+        </a>
+
+        <button
+          type="button"
+          onclick="window.print()"
+        >
+          Print / Save as PDF
+        </button>
+
+      </div>
+
     </div>
-  </div>
-</footer>
-<script>
-  const menuBtn = document.getElementById('menuBtn');
-  const mobileNav = document.getElementById('mobileNav');
-  if (menuBtn && mobileNav) { menuBtn.addEventListener('click', () => {
-    const open = mobileNav.classList.toggle('hidden') === false;
-    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });}
-  const themeBtn = document.getElementById('themeBtn');
-  const root = document.documentElement;
-  if (themeBtn) { 
-    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (prefersDark) root.classList.add('dark');
-    themeBtn.textContent = root.classList.contains('dark') ? 'ライト モード' : 'ダーク モード';
-    themeBtn.addEventListener('click', () => {
-      root.classList.toggle('dark');
-      themeBtn.textContent = root.classList.contains('dark') ? 'ライト モード' : 'ダーク モード';
-    });
-  }
-</script>
-<style>:root{scroll-padding-top:80px} body{padding-top:72px}</style>
+
+  </footer>
+
+  <script src="script.js"></script>
 
 </body>
+
 </html>

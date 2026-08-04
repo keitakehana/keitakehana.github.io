@@ -3,122 +3,352 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>News - Researcher Website</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <meta name="color-scheme" content="light dark" />
-  <style>@media print{ .no-print{ display:none !important; } }</style>
+  <title>News - Keisuke Takehana</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="bg-gray-50 text-gray-800 dark:bg-neutral-900 dark:text-neutral-100">
-  <header class="bg-white dark:bg-neutral-900 border-b border-gray-200 dark:border-neutral-800 sticky top-0 z-50">
-  <div class="max-w-5xl mx-auto px-4">
-    <div class="h-14 flex items-center justify-between">
-      <a href="index_en.html" class="font-bold">Keisuke Takehana, Ph.D.</a>
-
-
-     <nav class="hidden sm:flex gap-4 text-sm">
-        <a href="index_en.html" class="hover:opacity-80">Home</a> 
-        <a href="news_en.html" class="hover:opacity-80 text-blue-600 font-semibold">News</a> 
-        <a href="about_en.html" class="hover:opacity-80">About Me</a> 
-        <a href="publications_en.html" class="hover:opacity-80">Publications</a> 
-        <a href="projects_en.html" class="hover:opacity-80">Projects</a> 
-        <a href="talks_en.html" class="hover:opacity-80">Talks</a> 
-        <a href="media_en.html" class="hover:opacity-80">Media</a> 
-        <a href="contact_en.html" class="hover:opacity-80">Contact</a></nav>      
-      
-      
-      <div class="flex items-center gap-2">
-        <a href="news.html" class="text-xs px-2 py-1 rounded border border-gray-300 dark:border-neutral-700 hover:bg-gray-50 dark:hover:bg-neutral-800">日本語</a>
-        <button id="menuBtn" class="sm:hidden inline-flex items-center justify-center w-10 h-10 rounded-md border border-gray-300 dark:border-neutral-700" aria-expanded="false" aria-controls="mobileNav" aria-label="メニュー">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="index_en.html" class="site-name">Keisuke Takehana, Ph.D.</a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="index_en.html">Home</a>
+        <a href="news_en.html" class="active">News</a>
+        <a href="about_en.html">About Me</a>
+        <a href="publications_en.html">Publications</a>
+        <a href="projects_en.html">Projects</a>
+        <a href="talks_en.html">Talks</a>
+        <a href="media_en.html">Media</a>
+        <a href="contact_en.html">Contact</a>
+      </nav>
+      <div class="header-controls">
+        <a href="news.html" class="language-link">日本語</a>
+        <button id="menuBtn" class="menu-button" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
         </button>
       </div>
     </div>
-    <nav id="mobileNav" class="sm:hidden hidden flex-col gap-2 pb-3 text-sm" role="menu">
-      <a href="index_en.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">Home</a> 
-      <a href="news_en.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800 bg-gray-100 dark:bg-neutral-800 font-semibold">News</a> 
-      <a href="about_en.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">About Me</a> 
-      <a href="publications_en.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">Publications</a> 
-      <a href="projects_en.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">Projects</a> 
-      <a href="talks_en.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">Talks</a> 
-      <a href="media_en.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">Media</a> 
-      <a href="contact_en.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">Contact</a>   
-      
-      <div class="pt-2"><a href="news.html" class="text-xs px-2 py-1 rounded border border-gray-300 dark:border-neutral-700 hover:bg-gray-50 dark:hover:bg-neutral-800">日本語</a></div>
+    <nav id="mobileNav" class="mobile-nav" aria-label="Mobile navigation">
+      <a href="index_en.html">Home</a>
+      <a href="news_en.html" class="active">News</a>
+      <a href="about_en.html">About Me</a>
+      <a href="publications_en.html">Publications</a>
+      <a href="projects_en.html">Projects</a>
+      <a href="talks_en.html">Talks</a>
+      <a href="media_en.html">Media</a>
+      <a href="contact_en.html">Contact</a>
+      <div class="mobile-language">
+        <a href="news.html" class="language-link">日本語</a>
+      </div>
     </nav>
-  </div>
-</header>
+  </header>
 
+  <main class="site-main">
+    <h1 class="page-title">News</h1>
 
+    <section class="page-section">
+      <h2 class="section-title">Latest News</h2>
+      <p class="news-introduction">
+        Latest updates on research achievements, awards, conference presentations,
+        academic activities, and professional appointments.
+      </p>
 
-  <main class="max-w-5xl mx-auto px-4 py-10">
-  <h2 class="text-2xl font-bold mb-6">News</h2>
-    <ul class="space-y-2">
-    <li>2025-10-10 — Two papers, including one first-author paper, were accepted at the International Conference on Space Robotics (iSpaRo).</li>
-    <li>2025-10-01 — Started research activities as a <strong>JSPS Research Fellow (PD)</strong> at Tohoku University.</li>
-    <li>2025-09-30 — Completed research activities as a JSPS Research Fellow (DC1).</li>
-    <li>2025-09-30 — Completed research activities under the Tohoku University's International Joint Graduate Program (GP-Mech).</li>
-    <li>2025-09-25 — Awarded the degree of <strong>Doctor of Engineering</strong>.</li>
-    <li>2025-08-22 — Passed the doctoral dissertation defense and obtained all doctoral credits (<strong>early completion in 2 years</strong>).</li> 
-    <li>2025-08-10 — One first-author paper was published in Journal of Terramechanics.</li>
-    <li>2025-08-01 — Submitted the final version of my doctoral dissertation.</li> 
-    <li>2025-07-31 — One co-authored paper was accepted at the international conference ISTVS 2025.</li>
-    <li>2024-07-22 — My presentation at the 353rd Research Meeting of the SICE Tohoku Branch was selected for the <strong>Presentation Award</strong>.</li>
-    <li>2024-07-14 — Gave a presentation at the 353rd Research Meeting of the SICE Tohoku Branch (@ Hachinohe, Japan).</li>
-    <li>2025-07-11 — Conducted the final doctoral dissertation defense.</li> 
-    <li>2025-05-20 — One first-author paper was published in Journal of Terramechanics.</li>
-    <li>2025-04-10 — One co-authored paper was published in Space Science Reviews.</li>
-    <li>2025-03-24 — Began a research stay at <strong>Concordia University, Aerospace Lab.</strong> (@ Montreal Canada) (until July).</li>
-    <li>2025-02-28 — Completed a six-month internship at ispace Inc.</li>
-    <li>2025-02-15 — One first-author paper was published in Journal of Terramechanics.</li>
-    <li>2025-01-25 — Awarded the <strong>Globalink Research Award</strong> for study abroad in Canada.</li>
-    <li>2025-01-20 — One first-author paper was published in Aerospace.</li>
-    <li>2024-12-23 — One first-author paper was published in Journal of Evolving Space Activities.</li>
-    <li>2024-10-31 — Delivered two presentations at the international conference ISTVS 2024 (@ Yokohama, Japan).</li>
-    <li>2024-07-20 — Served as an Administrative Assistant in the Tohoku University Summer Program TESP 2024.</li>
-    <li>2024-07-15 — Three papers, including two first-author papers, were accepted at the international conference ISTVS 2024.</li>
-    <li>2024-04-01 — Launched the research project <strong>''Development of a Novel Dynamic Terramechanics Theory''</strong> funded by JSPS KAKENHI.</li>
-    <li>2024-04-01 — Began research activities as a <strong>JSPS Research Fellow (DC1)</strong>.</li>
-    <li>2024-03-31 — Completed research activities under the Tohoku University's Pioneering ResearchSupport Project .</li>
-    <li>2024-03-25 — Received <strong>Dean Award as an outstanding student award</strong> from Tohoku University.</li>
-    <li>2024-01-01 — Opened my personal website.</li>
+      <h3 class="news-year">2026</h3>
+      <ul class="news-list">
+        <li class="news-item">
+          <time class="news-date" datetime="2026-07-31">2026.07.31</time>
+          <a href="about_en.html" class="news-category news-category-funding">Funding</a>
+          <div class="news-content">The research project supported by the JSPS KAKENHI Grant-in-Aid for JSPS Fellows was completed.</div>
+        </li>
 
-  </ul>
+        <li class="news-item">
+          <time class="news-date" datetime="2026-07-16">2026.07.16</time>
+          <a href="about_en.html" class="news-category news-category-service">Service</a>
+          <div class="news-content">
+            The special session <strong>“Intelligent Space Robotics for Future Space Exploration and On-Orbit Servicing”</strong>,
+            proposed as Principal Organizer for the <em>IEEE/SICE International Symposium on System Integration (SII 2027)</em>, was accepted.
+          </div>
+        </li>
+
+        <li class="news-item">
+          <time class="news-date" datetime="2026-05-29">2026.05.29</time>
+          <a href="talks_en.html" class="news-category news-category-talk">Talk</a>
+          <div class="news-content">
+            Served as a panelist in the international panel discussion on “Sustainable and Scalable Space Development and Utilization”
+            at the international workshop <em>RENKEI ECR COLLABORATION LAB 2026</em>.
+          </div>
+        </li>
+
+        <li class="news-item">
+          <time class="news-date" datetime="2026-05-29">2026.05.29</time>
+          <a href="talks_en.html" class="news-category news-category-talk">Talk</a>
+          <div class="news-content">
+            Delivered an invited talk entitled “Development of Capture and Servicing Technologies for Uncooperative Satellites in On-Orbit Servicing (OOS) for Space Infrastructure”
+            at the international workshop <em>RENKEI ECR COLLABORATION LAB 2026</em>.
+          </div>
+        </li>
+
+        <li class="news-item">
+          <time class="news-date" datetime="2026-05-20">2026.05.20</time>
+          <a href="about_en.html" class="news-category news-category-service">Service</a>
+          <div class="news-content">
+            The organized session “Proximity Operations, Capture Technologies, and Ground Verification for Uncooperative Satellites toward On-Orbit Servicing”
+            was approved for the 70th Space Sciences and Technology Conference, where I will serve as an organizer.
+          </div>
+        </li>
+
+        <li class="news-item">
+          <time class="news-date" datetime="2026-03-30">2026.03.30</time>
+          <a href="media_en.html" class="news-category news-category-media">Media</a>
+          <div class="news-content">The Tohoku University Mechanical Engineering website featured the Tohoku University President’s Award and the Graduate Research Encouragement Award.</div>
+        </li>
+
+        <li class="news-item">
+          <time class="news-date" datetime="2026-03-25">2026.03.25</time>
+          <a href="about_en.html" class="news-category news-category-award">Award</a>
+          <div class="news-content">Received the <strong>Tohoku University President’s Award</strong>.</div>
+        </li>
+
+        <li class="news-item">
+          <time class="news-date" datetime="2026-02-24">2026.02.24</time>
+          <a href="about_en.html" class="news-category news-category-award">Award</a>
+          <div class="news-content">Received the <strong>Graduate Research Encouragement Award</strong> from the Society of Automotive Engineers of Japan.</div>
+        </li>
+
+        <li class="news-item">
+          <time class="news-date" datetime="2026-01-05">2026.01.05</time>
+          <a href="about_en.html" class="news-category news-category-service">Service</a>
+          <div class="news-content">Appointed as <strong>Public Relations Officer</strong> of the SICE Tohoku Branch.</div>
+        </li>
+      </ul>
+
+      <h3 class="news-year">2025</h3>
+      <ul class="news-list">
+        <li class="news-item">
+          <time class="news-date" datetime="2025-12-03">2025.12.03</time>
+          <a href="talks_en.html" class="news-category news-category-talk">Talk</a>
+          <div class="news-content">Presented one paper at the <em>International Conference on Space Robotics (iSpaRo 2025)</em>.</div>
+        </li>
+
+        <li class="news-item">
+          <time class="news-date" datetime="2025-12-01">2025.12.01</time>
+          <a href="about_en.html" class="news-category news-category-research">Research</a>
+          <div class="news-content">Began research activities with the Space Infrastructure Engineering Laboratory, Department of Aerospace Engineering, Graduate School of Engineering, Tohoku University.</div>
+        </li>
+
+        <li class="news-item">
+          <time class="news-date" datetime="2025-12-01">2025.12.01</time>
+          <a href="about_en.html" class="news-category news-category-career">Career</a>
+          <div class="news-content">Appointed as a <strong>Specially Appointed Assistant Professor</strong> at the Green Cross-Tech Research Center, Green Goals Initiative, Tohoku University.</div>
+        </li>
+
+        <li class="news-item">
+          <time class="news-date" datetime="2025-11-30">2025.11.30</time>
+          <a href="about_en.html" class="news-category news-category-career">Career</a>
+          <div class="news-content">Completed research activities as a JSPS Research Fellow (PD).</div>
+        </li>
+
+        <li class="news-item">
+          <time class="news-date" datetime="2025-10-10">2025.10.10</time>
+          <a href="publications_en.html" class="news-category news-category-publication">Publication</a>
+          <div class="news-content">Two papers, including one first-author paper, were accepted for the <em>International Conference on Space Robotics (iSpaRo)</em>.</div>
+        </li>
+
+        <li class="news-item">
+          <time class="news-date" datetime="2025-10-01">2025.10.01</time>
+          <a href="about_en.html" class="news-category news-category-career">Career</a>
+          <div class="news-content">Began research activities as a <strong>JSPS Research Fellow (PD)</strong> in the Department of Aerospace Engineering, Graduate School of Engineering, Tohoku University.</div>
+        </li>
+
+        <li class="news-item">
+          <time class="news-date" datetime="2025-09-30">2025.09.30</time>
+          <a href="about_en.html" class="news-category news-category-career">Career</a>
+          <div class="news-content">Completed research activities as a JSPS Research Fellow (DC1).</div>
+        </li>
+
+        <li class="news-item">
+          <time class="news-date" datetime="2025-09-30">2025.09.30</time>
+          <a href="about_en.html" class="news-category news-category-career">Career</a>
+          <div class="news-content">Completed activities in the Tohoku University Graduate Program in Mechanical Science and Technology.</div>
+        </li>
+
+        <li class="news-item">
+          <time class="news-date" datetime="2025-09-25">2025.09.25</time>
+          <a href="about_en.html" class="news-category news-category-degree">Degree</a>
+          <div class="news-content">Received the <strong>Doctor of Engineering</strong> degree from Tohoku University.</div>
+        </li>
+
+        <li class="news-item">
+          <time class="news-date" datetime="2025-08-22">2025.08.22</time>
+          <a href="about_en.html" class="news-category news-category-degree">Degree</a>
+          <div class="news-content">Passed the doctoral dissertation examination and fulfilled all requirements for the doctoral program, completing the program in an accelerated period of two years.</div>
+        </li>
+
+        <li class="news-item">
+          <time class="news-date" datetime="2025-08-10">2025.08.10</time>
+          <a href="publications_en.html" class="news-category news-category-publication">Publication</a>
+          <div class="news-content">A first-author paper was published in <em>Journal of Terramechanics</em>.</div>
+        </li>
+
+        <li class="news-item">
+          <time class="news-date" datetime="2025-08-01">2025.08.01</time>
+          <a href="about_en.html" class="news-category news-category-degree">Degree</a>
+          <div class="news-content">Submitted the final version of the doctoral dissertation.</div>
+        </li>
+
+        <li class="news-item">
+          <time class="news-date" datetime="2025-07-31">2025.07.31</time>
+          <a href="publications_en.html" class="news-category news-category-publication">Publication</a>
+          <div class="news-content">One co-authored paper was accepted for the <em>55th Conference of the International Society for Terrain-Vehicle Systems (ISTVS 2025)</em>.</div>
+        </li>
+
+        <li class="news-item">
+          <time class="news-date" datetime="2025-07-22">2025.07.22</time>
+          <a href="about_en.html" class="news-category news-category-award">Award</a>
+          <div class="news-content">A presentation at the 353rd Technical Meeting of the SICE Tohoku Branch received the <strong>Excellent Presentation Award</strong>.</div>
+        </li>
+
+        <li class="news-item">
+          <time class="news-date" datetime="2025-07-14">2025.07.14</time>
+          <a href="talks_en.html" class="news-category news-category-talk">Talk</a>
+          <div class="news-content">Presented one research paper at the 353rd Technical Meeting of the SICE Tohoku Branch.</div>
+        </li>
+
+        <li class="news-item">
+          <time class="news-date" datetime="2025-07-11">2025.07.11</time>
+          <a href="about_en.html" class="news-category news-category-degree">Degree</a>
+          <div class="news-content">Completed the final doctoral dissertation defense.</div>
+        </li>
+
+        <li class="news-item">
+          <time class="news-date" datetime="2025-05-20">2025.05.20</time>
+          <a href="publications_en.html" class="news-category news-category-publication">Publication</a>
+          <div class="news-content">A first-author paper was published in <em>Journal of Terramechanics</em>.</div>
+        </li>
+
+        <li class="news-item">
+          <time class="news-date" datetime="2025-04-10">2025.04.10</time>
+          <a href="publications_en.html" class="news-category news-category-publication">Publication</a>
+          <div class="news-content">A co-authored paper was published in <em>Space Science Reviews</em>.</div>
+        </li>
+
+      <li class="news-item">
+        <time class="news-date" datetime="2025-03-01" >2025.03.24</time>
+        <a href="about_en.html" class="news-category news-category-funding">Funding</a>
+        <div class="news-content"> Received an
+          Overseas Research Travel Grant
+          from the Tohoku University Graduate Program in GP-Mech
+          to support a research stay at Concordia University, Canada.
+        </div>
+
+      </li>
+        <li class="news-item">
+          <time class="news-date" datetime="2025-03-24">2025.03.24</time>
+          <a href="about_en.html" class="news-category news-category-research">Research</a>
+          <div class="news-content">Began a research stay at the Aerospace Robotics Laboratory, Concordia University, Canada.</div>
+        </li>
+
+        <li class="news-item">
+          <time class="news-date" datetime="2025-02-28">2025.02.28</time>
+          <a href="about_en.html" class="news-category news-category-career">Career</a>
+          <div class="news-content">Completed a six-month long-term internship at ispace, inc.</div>
+        </li>
+
+        <li class="news-item">
+          <time class="news-date" datetime="2025-02-15">2025.02.15</time>
+          <a href="publications_en.html" class="news-category news-category-publication">Publication</a>
+          <div class="news-content">A first-author paper was published in <em>Journal of Terramechanics</em>.</div>
+        </li>
+
+        <li class="news-item">
+          <time class="news-date" datetime="2025-01-25">2025.01.25</time>
+          <a href="about_en.html" class="news-category news-category-funding">Funding</a>
+          <div class="news-content">Selected for the <strong>Mitacs Globalink Research Award</strong> to support international collaborative research in Canada.</div>
+        </li>
+
+        <li class="news-item">
+          <time class="news-date" datetime="2025-01-20">2025.01.20</time>
+          <a href="publications_en.html" class="news-category news-category-publication">Publication</a>
+          <div class="news-content">A first-author paper was published in <em>Aerospace</em>.</div>
+        </li>
+      </ul>
+
+      <h3 class="news-year">2024</h3>
+      <ul class="news-list">
+        <li class="news-item">
+          <time class="news-date" datetime="2024-12-23">2024.12.23</time>
+          <a href="publications_en.html" class="news-category news-category-publication">Publication</a>
+          <div class="news-content">A first-author paper was published in <em>Journal of Evolving Space Activities</em>.</div>
+        </li>
+
+        <li class="news-item">
+          <time class="news-date" datetime="2024-10-31">2024.10.31</time>
+          <a href="talks_en.html" class="news-category news-category-talk">Talk</a>
+          <div class="news-content">Presented one research paper at <em>ISTVS 2024</em>.</div>
+        </li>
+
+        <li class="news-item">
+          <time class="news-date" datetime="2024-08-10">2024.08.10</time>
+          <a href="about_en.html" class="news-category news-category-teaching">Teaching</a>
+          <div class="news-content">Served as an Administrative Assistant for the Tohoku University Engineering Summer Program (TESP 2024).</div>
+        </li>
+
+        <li class="news-item">
+          <time class="news-date" datetime="2024-07-15">2024.07.15</time>
+          <a href="publications_en.html" class="news-category news-category-publication">Publication</a>
+          <div class="news-content">Three papers, including two first-author papers, were accepted for <em>ISTVS 2024</em>.</div>
+        </li>
+
+        <li class="news-item">
+          <time class="news-date" datetime="2024-05-01">2024.05.01</time>
+          <a href="about_en.html" class="news-category news-category-funding">Funding</a>
+          <div class="news-content">Began the JSPS KAKENHI research project <strong>“Development of a Dynamic Terramechanics Theory Based on Wheel Traction Performance”</strong>.</div>
+        </li>
+
+        <li class="news-item">
+          <time class="news-date" datetime="2024-04-01">2024.04.01</time>
+          <a href="about_en.html" class="news-category news-category-career">Career</a>
+          <div class="news-content">Began research activities as a <strong>JSPS Research Fellow (DC1)</strong>.</div>
+        </li>
+
+        <li class="news-item">
+          <time class="news-date" datetime="2024-03-31">2024.03.31</time>
+          <a href="about_en.html" class="news-category news-category-funding">Funding</a>
+          <div class="news-content">Completed research activities supported by the Tohoku University Support for Pioneering Research Initiated by the Next Generation.</div>
+        </li>
+
+        <li class="news-item">
+          <time class="news-date" datetime="2024-03-29">2024.03.29</time>
+          <a href="media_en.html" class="news-category news-category-media">Media</a>
+          <div class="news-content">The Dean’s Award was featured on the websites of the Tohoku University Graduate School of Engineering and Tohoku University Mechanical Engineering.</div>
+        </li>
+
+        <li class="news-item">
+          <time class="news-date" datetime="2024-03-25">2024.03.25</time>
+          <a href="about_en.html" class="news-category news-category-award">Award</a>
+          <div class="news-content">Received the <strong>Dean’s Award, Graduate School of Engineering, Tohoku University</strong>.</div>
+        </li>
+
+        <li class="news-item">
+          <time class="news-date" datetime="2024-01-01">2024.01.01</time>
+          <a href="index_en.html" class="news-category news-category-website">Website</a>
+          <div class="news-content">Launched this researcher website.</div>
+        </li>
+      </ul>
+    </section>
   </main>
-  
 
-
-
-
-
-<footer class="border-t border-gray-200 dark:border-neutral-800 py-8 mt-4">
-  <div class="max-w-5xl mx-auto px-4 text-sm text-gray-600 dark:text-neutral-400 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-    <div>© 2025 Keisuke Takehana. All rights reserved.</div>
-    <div class="flex gap-4 no-print">
-      <a class="underline" href="contact_en.html">Contact</a>
-      <button class="underline" onclick="window.print()">Print / PDF</button>
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <div>© 2026 Keisuke Takehana. All rights reserved.</div>
+      <div class="footer-links no-print">
+        <a href="contact_en.html">Contact</a>
+        <button type="button" onclick="window.print()">Print / Save as PDF</button>
+      </div>
     </div>
-  </div>
-</footer>
-<script>
-  const menuBtn = document.getElementById('menuBtn');
-  const mobileNav = document.getElementById('mobileNav');
-  if (menuBtn && mobileNav) { menuBtn.addEventListener('click', () => {
-    const open = mobileNav.classList.toggle('hidden') === false;
-    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });}
-  const themeBtn = document.getElementById('themeBtn');
-  const root = document.documentElement;
-  if (themeBtn) { 
-    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (prefersDark) root.classList.add('dark');
-    themeBtn.textContent = root.classList.contains('dark') ? 'ライト モード' : 'ダーク モード';
-    themeBtn.addEventListener('click', () => {
-      root.classList.toggle('dark');
-      themeBtn.textContent = root.classList.contains('dark') ? 'ライト モード' : 'ダーク モード';
-    });
-  }
-</script>
-<style>:root{scroll-padding-top:80px} body{padding-top:72px}</style>
+  </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,92 +1,211 @@
 <!DOCTYPE html>
 <html lang="ja" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact - Researcher Website</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <meta name="color-scheme" content="light dark" />
-  <style>@media print{ .no-print{ display:none !important; } }</style>
-</head>
-<body class="bg-gray-50 text-gray-800 dark:bg-neutral-900 dark:text-neutral-100">
-  <header class="bg-white dark:bg-neutral-900 border-b border-gray-200 dark:border-neutral-800 sticky top-0 z-50">
-  <div class="max-w-5xl mx-auto px-4">
-    <div class="h-14 flex items-center justify-between">
-      <a href="index.html" class="font-bold">Keisuke Takehana, Ph.D.</a>
 
-      <nav class="hidden sm:flex gap-4 text-sm">
-        <a href="index.html" class="hover:opacity-80">Home</a> 
-        <a href="news.html" class="hover:opacity-80">News</a> 
-        <a href="about.html" class="hover:opacity-80">About Me</a> 
-        <a href="publications.html" class="hover:opacity-80">Publications</a> 
-        <a href="projects.html" class="hover:opacity-80">Projects</a> 
-        <a href="talks.html" class="hover:opacity-80">Talks</a> 
-        <a href="media.html" class="hover:opacity-80">Media</a> 
-        <a href="contact.html" class="hover:opacity-80 text-blue-600 font-semibold">Contact</a></nav>
-      
-      
-      <div class="flex items-center gap-2">
-        <a href="contact_en.html" class="text-xs px-2 py-1 rounded border border-gray-300 dark:border-neutral-700 hover:bg-gray-50 dark:hover:bg-neutral-800">English</a>
-        <button id="menuBtn" class="sm:hidden inline-flex items-center justify-center w-10 h-10 rounded-md border border-gray-300 dark:border-neutral-700" aria-expanded="false" aria-controls="mobileNav" aria-label="メニュー">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+  <title>Contact - Keisuke Takehana</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- =====================================================
+       Header
+       ===================================================== -->
+
+  <header class="site-header">
+
+    <div class="site-header-inner">
+
+      <a href="index.html" class="site-name">
+        Keisuke Takehana, Ph.D.
+      </a>
+
+      <nav
+        class="desktop-nav"
+        aria-label="メインナビゲーション"
+      >
+        <a href="index.html">Home</a>
+        <a href="news.html">News</a>
+        <a href="about.html">About Me</a>
+        <a href="publications.html">Publications</a>
+        <a href="projects.html">Projects</a>
+        <a href="talks.html">Talks</a>
+        <a href="media.html">Media</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+
+      <div class="header-controls">
+
+        <a href="contact_en.html" class="language-link">
+          English
+        </a>
+
+        <button
+          id="menuBtn"
+          class="menu-button"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobileNav"
+          aria-label="メニューを開く"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
         </button>
+
       </div>
+
     </div>
 
-    <nav id="mobileNav" class="sm:hidden hidden flex-col gap-2 pb-3 text-sm" role="menu">
-      <a href="index.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">Home</a> 
-      <a href="news.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">News</a> 
-      <a href="about.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">About Me</a> 
-      <a href="publications.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">Publications</a> 
-      <a href="projects.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">Projects</a> 
-      <a href="talks.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">Talks</a> 
-      <a href="media.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">Media</a> 
-      <a href="contact.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800 bg-gray-100 dark:bg-neutral-800 font-semibold">Contact</a>  
-      
-      <div class="pt-2"><a href="contact_en.html" class="text-xs px-2 py-1 rounded border border-gray-300 dark:border-neutral-700 hover:bg-gray-50 dark:hover:bg-neutral-800">English</a></div>
+    <!-- Mobile navigation -->
+
+    <nav
+      id="mobileNav"
+      class="mobile-nav"
+      aria-label="モバイルナビゲーション"
+    >
+      <a href="index.html">Home</a>
+      <a href="news.html">News</a>
+      <a href="about.html">About Me</a>
+      <a href="publications.html">Publications</a>
+      <a href="projects.html">Projects</a>
+      <a href="talks.html">Talks</a>
+      <a href="media.html">Media</a>
+      <a href="contact.html" class="active">Contact</a>
+
+      <div class="mobile-language">
+        <a href="contact_en.html" class="language-link">
+          English
+        </a>
+      </div>
+
     </nav>
-  </div>
-</header>
+
+  </header>
 
 
-  <main class="max-w-5xl mx-auto px-4 py-10">
-    <h2 class="text-2xl font-bold mb-6">問い合わせ</h2>
-    <p>所属：東北大学 大学院工学研究科 航空宇宙工学専攻 吉田研究室</p>
-    <p>所在地：〒980-8579 仙台市青葉区荒巻字青葉6-6-01</p>
-    <p>Email: keisuke.takehana.s1 [at] dc.tohoku.ac.jp</p>
+  <!-- =====================================================
+       Main content
+       ===================================================== -->
+
+  <main class="site-main">
+
+    <h1 class="page-title">
+      Contact
+    </h1>
+
+    <section class="page-section">
+
+      <h2 class="section-title">
+        お問い合わせ
+      </h2>
+
+      <dl class="researcher-info">
+
+        <div class="researcher-info-row">
+
+          <dt>
+            所属
+          </dt>
+
+          <dd>
+            東北大学大学院工学研究科<br>
+            航空宇宙工学専攻<br>
+            宇宙インフラ工学研究室
+          </dd>
+
+        </div>
+
+
+        <div class="researcher-info-row">
+
+          <dt>
+            所在地
+          </dt>
+
+          <dd>
+            〒980-8579<br>
+            仙台市青葉区荒巻字青葉6-6-11<br>
+            総合研究棟301号室
+          </dd>
+
+        </div>
+
+
+        <div class="researcher-info-row">
+
+          <dt>
+            Email
+          </dt>
+
+          <dd>
+            keisuke.takehana.a4 [at] tohoku.ac.jp
+          </dd>
+
+        </div>
+
+      </dl>
+
+      <p class="text-muted contact-note">
+        メールをお送りいただく際は，
+        [at]を@に置き換えてください．
+      </p>
+
+    </section>
+
   </main>
 
-  
 
-<footer class="border-t border-gray-200 dark:border-neutral-800 py-8 mt-4">
-  <div class="max-w-5xl mx-auto px-4 text-sm text-gray-600 dark:text-neutral-400 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-    <div>© 2025 Keisuke Takehana. All rights reserved.</div>
-    <div class="flex gap-4 no-print">
-      <a class="underline" href="contact.html">Contact</a>
-      <button class="underline" onclick="window.print()">印刷 / PDF保存</button>
+  <!-- =====================================================
+       Footer
+       ===================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="site-footer-inner">
+
+      <div>
+        © 2026 Keisuke Takehana. All rights reserved.
+      </div>
+
+      <div class="footer-links no-print">
+
+        <a href="contact.html">
+          Contact
+        </a>
+
+        <button
+          type="button"
+          onclick="window.print()"
+        >
+          印刷 / PDF保存
+        </button>
+
+      </div>
+
     </div>
-  </div>
-</footer>
-<script>
-  const menuBtn = document.getElementById('menuBtn');
-  const mobileNav = document.getElementById('mobileNav');
-  if (menuBtn && mobileNav) { menuBtn.addEventListener('click', () => {
-    const open = mobileNav.classList.toggle('hidden') === false;
-    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });}
-  const themeBtn = document.getElementById('themeBtn');
-  const root = document.documentElement;
-  if (themeBtn) { 
-    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (prefersDark) root.classList.add('dark');
-    themeBtn.textContent = root.classList.contains('dark') ? 'ライト モード' : 'ダーク モード';
-    themeBtn.addEventListener('click', () => {
-      root.classList.toggle('dark');
-      themeBtn.textContent = root.classList.contains('dark') ? 'ライト モード' : 'ダーク モード';
-    });
-  }
-</script>
-<style>:root{scroll-padding-top:80px} body{padding-top:72px}</style>
+
+  </footer>
+
+  <script src="script.js"></script>
 
 </body>
+
 </html>

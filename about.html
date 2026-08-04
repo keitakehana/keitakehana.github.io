@@ -1,233 +1,1163 @@
 <!DOCTYPE html>
 <html lang="ja" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Teaching - Researcher Website</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <meta name="color-scheme" content="light dark" />
-  <style>@media print{ .no-print{ display:none !important; } }</style>
-</head>
-<body class="bg-gray-50 text-gray-800 dark:bg-neutral-900 dark:text-neutral-100">
-  <header class="bg-white dark:bg-neutral-900 border-b border-gray-200 dark:border-neutral-800 sticky top-0 z-50">
-  <div class="max-w-5xl mx-auto px-4">
-    <div class="h-14 flex items-center justify-between">
-      <a href="index.html" class="font-bold">Keisuke Takehana, Ph.D.</a>
 
-      <nav class="hidden sm:flex gap-4 text-sm">
-        <a href="index.html" class="hover:opacity-80">Home</a> 
-        <a href="news.html" class="hover:opacity-80">News</a> 
-        <a href="about.html" class="hover:opacity-80 text-blue-600 font-semibold">About Me</a> 
-        <a href="publications.html" class="hover:opacity-80">Publications</a> 
-        <a href="projects.html" class="hover:opacity-80">Projects</a> 
-        <a href="talks.html" class="hover:opacity-80">Talks</a> 
-        <a href="media.html" class="hover:opacity-80">Media</a> 
-        <a href="contact.html" class="hover:opacity-80">Contact</a></nav>
-      
-      <div class="flex items-center gap-2">
-        <a href="about_en.html" class="text-xs px-2 py-1 rounded border border-gray-300 dark:border-neutral-700 hover:bg-gray-50 dark:hover:bg-neutral-800">English</a>
-        <button id="menuBtn" class="sm:hidden inline-flex items-center justify-center w-10 h-10 rounded-md border border-gray-300 dark:border-neutral-700" aria-expanded="false" aria-controls="mobileNav" aria-label="メニュー">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+  <title>About Me - Keisuke Takehana</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- =====================================================
+       Header
+       ===================================================== -->
+
+  <header class="site-header">
+
+    <div class="site-header-inner">
+
+      <a href="index.html" class="site-name">
+        Keisuke Takehana, Ph.D.
+      </a>
+
+      <nav
+        class="desktop-nav"
+        aria-label="メインナビゲーション"
+      >
+        <a href="index.html">Home</a>
+        <a href="news.html">News</a>
+        <a href="about.html" class="active">About Me</a>
+        <a href="publications.html">Publications</a>
+        <a href="projects.html">Projects</a>
+        <a href="talks.html">Talks</a>
+        <a href="media.html">Media</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="header-controls">
+
+        <a href="about_en.html" class="language-link">
+          English
+        </a>
+
+        <button
+          id="menuBtn"
+          class="menu-button"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobileNav"
+          aria-label="メニューを開く"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
         </button>
+
       </div>
+
     </div>
 
-    <nav id="mobileNav" class="sm:hidden hidden flex-col gap-2 pb-3 text-sm" role="menu">
-      <a href="index.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">Home</a> 
-      <a href="news.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">News</a> 
-      <a href="about.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800 bg-gray-100 dark:bg-neutral-800 font-semibold">About Me</a> 
-      <a href="publications.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">Publications</a> 
-      <a href="projects.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">Projects</a> 
-      <a href="talks.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">Talks</a> 
-      <a href="media.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">Media</a> 
-      <a href="contact.html" class="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-neutral-800">Contact</a>
-      
-      <div class="pt-2"><a href="about_en.html" class="text-xs px-2 py-1 rounded border border-gray-300 dark:border-neutral-700 hover:bg-gray-50 dark:hover:bg-neutral-800">English</a></div>
+    <!-- Mobile navigation -->
+
+    <nav
+      id="mobileNav"
+      class="mobile-nav"
+      aria-label="モバイルナビゲーション"
+    >
+      <a href="index.html">Home</a>
+      <a href="news.html">News</a>
+      <a href="about.html" class="active">About Me</a>
+      <a href="publications.html">Publications</a>
+      <a href="projects.html">Projects</a>
+      <a href="talks.html">Talks</a>
+      <a href="media.html">Media</a>
+      <a href="contact.html">Contact</a>
+
+      <div class="mobile-language">
+        <a href="about_en.html" class="language-link">
+          English
+        </a>
+      </div>
+
     </nav>
-  </div>
-</header>
+
+  </header>
+
+
+  <!-- =====================================================
+       Main content
+       ===================================================== -->
+
+  <main class="site-main">
+
+    <h1 class="page-title">About Me</h1>
+
+
+    <!-- ===================================================
+         Researcher Information
+         =================================================== -->
+
+    <section class="page-section">
+
+      <h2 class="section-title">
+        Researcher Information
+      </h2>
+
+      <dl class="researcher-info">
+
+        <div class="researcher-info-row">
+          <dt>氏名</dt>
+          <dd>竹花 佳祐（Keisuke Takehana）</dd>
+        </div>
+
+        <div class="researcher-info-row">
+          <dt>学位</dt>
+          <dd>博士（工学）／Doctor of Engineering</dd>
+        </div>
+
+        <div class="researcher-info-row">
+
+          <dt>所属</dt>
+
+          <dd>
+            東北大学 グリーン未来創造機構
+            グリーンクロステック研究センター<br>
+            （東北大学 大学院工学研究科 航空宇宙工学専攻）
+          </dd>
+
+        </div>
+
+        <div class="researcher-info-row">
+          <dt>職位</dt>
+          <dd>特任助教</dd>
+        </div>
+
+        <div class="researcher-info-row">
+
+          <dt>専門分野</dt>
+
+          <dd>
+            宇宙ロボティクス，軌道上サービス，
+            惑星探査ローバー，テラメカニクス
+          </dd>
+
+        </div>
+
+        <div class="researcher-info-row">
+
+          <dt>Google Scholar</dt>
+
+          <dd>
+            <a
+              href="https://scholar.google.com/citations?user=8pN0LNAAAAAJ"
+              class="publication-title"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Google Scholar Profile
+            </a>
+          </dd>
+
+        </div>
+
+        <div class="researcher-info-row">
+
+          <dt>researchmap</dt>
+
+          <dd>
+            <a
+              href="https://researchmap.jp/k-tkhn"
+              class="publication-title"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              researchmap Profile
+            </a>
+          </dd>
+
+        </div>
+
+      </dl>
+
+    </section>
+
+ 
+
+
+<!-- ===================================================
+     職歴・研究経験
+     =================================================== -->
+
+<section class="page-section">
+
+  <h2 class="section-title">
+    職歴・研究歴
+  </h2>
+
+
+  <!-- ===================================================
+       大学・研究機関
+       =================================================== -->
+
+  <h3 class="service-subtitle">
+    大学・研究機関
+  </h3>
+
+  <ul>
+
+    <li>
+      <strong>東北大学 特任助教</strong><br>
+      東北大学 グリーン未来創造機構 グリーンクロステック研究センター<br>
+      2025年12月–現在
+    </li>
+
+    <li>
+      <strong>日本学術振興会 特別研究員（PD）</strong><br>
+      東北大学 大学院工学研究科 航空宇宙工学専攻<br>
+      2025年10月–2025年11月
+    </li>
+
+    <li>
+      <strong>日本学術振興会 特別研究員（DC1）</strong><br>
+      東北大学 大学院工学研究科 航空宇宙工学専攻<br>
+      2024年4月–2025年9月
+    </li>
+
+  </ul>
+
+
+  <!-- ===================================================
+       海外研究留学
+       =================================================== -->
+
+  <h3 class="service-subtitle">
+    海外研究留学
+  </h3>
+
+  <ul>
+
+    <li>
+      <strong>コンコルディア大学（カナダ）研究生</strong><br>
+      Aerospace Robotics Laboratory, Concordia University, Canada<br>
+      2025年1月–2025年7月
+    </li>
+
+    <li>
+      <strong>ドイツ航空宇宙センター（DLR）研究生</strong><br>
+      Institute of System Dynamics and Control, German Aerospace Center, Germany<br>
+      2023年4月–2023年5月
+    </li>
+
+  </ul>
+
+
+  <!-- ===================================================
+       インターンシップ
+       =================================================== -->
+
+  <h3 class="service-subtitle">
+    インターンシップ
+  </h3>
+
+  <ul>
+
+    <li>
+      <strong>株式会社ispace</strong><br>
+      2024年9月–2025年2月
+    </li>
+
+    <li>
+      <strong>株式会社amulapo</strong><br>
+      2022年4月–2024年3月
+    </li>
+
+  </ul>
+
+
+  <!-- ===================================================
+       学内業務
+       =================================================== -->
+
+  <h3 class="service-subtitle">
+    学内業務
+  </h3>
+
+  <ul>
+
+      <li>
+      <strong>アドミニストレイティブアシスタント（AA）</strong><br>
+      東北大学 大学院工学研究科<br>
+      2024年7月–2024年8月
+    </li>
+    <li>
+      <strong>リサーチアシスタント（RA）</strong><br>
+      東北大学 大学院工学研究科<br>
+      2022年10月–2024年3月
+    </li>
 
 
 
-<main class="max-w-5xl mx-auto px-4 py-10">
-  <h2 class="text-2xl font-bold mb-6">About me</h2>
+  </ul>
 
-  <section class="mb-8">
-    <h3 class="text-xl font-semibold mb-3">経歴（研究歴）</h3>
-    <ul class="space-y-2 list-disc pl-5">
-      <!-- ここにコメントとして残したい内容 <li><strong>2025年10月–　　現在　　— 独立行政法人 日本学術振興会 特別研究員PD</strong></li>  -->
-      <li>2025年10月–　　現在　　 — 独立行政法人 日本学術振興会 特別研究員PD</li>
-      <li>2024年04月–2025年09月 — 独立行政法人 日本学術振興会 特別研究員DC1</li>
-      <li>2025年01月–2025年07月 — コンコルディア大学（カナダ）, Aerospace Robotics Lab., 研究生</li>
-      <li>2024年09月–2025年02月 — 株式会社ispace, 長期インターンシップ</li>
-      <li>2024年07月–2024年08月 — 東北大学大学院工学研究科, アドミニストレイティブアシスタント</li>
-      <li>2022年10月–2024年03月 — 東北大学大学院工学研究科, リサーチアシスタント</li>
-      <li>2022年04月–2024年03月 — 株式会社amulapo, 長期インターンシップ</li>
-      <li>2023年04月–2023年05月 — ドイツ航空宇宙センター (DLR), Institute of System Dynamics and Control, 研究生</li>
+</section>
+
+
+<!-- ===================================================
+     学歴
+     =================================================== -->
+
+<section class="page-section">
+
+  <h2 class="section-title">
+    学歴
+  </h2>
+
+  <ul class="about-item-list">
+
+    <!-- =================================================
+         博士後期課程
+         ================================================= -->
+
+    <li class="about-item">
+
+      <strong class="about-item-title">
+      東北大学 大学院工学研究科
+      航空宇宙工学専攻 博士後期課程
+      </strong>
+
+      <br>
+
+      <span class="item-meta">
+        2023年10月–2025年9月
+      </span>
+
+      <div class="item-detail">
+
+        <span class="item-label">
+          学位
+        </span>
+
+        博士（工学）
+
+      </div>
+
+      <div class="item-detail">
+
+        <span class="item-label">
+          指導教員
+        </span>
+
+        吉田 和哉 教授
+
+      </div>
+
+      <div class="item-detail">
+
+        <span class="item-label">
+          博士論文
+        </span>
+
+        <em>
+          Terramechanics-Based Traction Analysis of
+          High-Speed Mobility for Lunar Rovers
+        </em>
+
+      </div>
+
+      <div class="item-badges">
+
+      <a
+        href="img/awards/certificate_president_award_2026.jpg"
+        class="award-label"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        🏆 総長賞
+      </a>
+
+      <a
+        href="img/awards/certificate_automotive_researc_2026.jpg"
+        class="award-label"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        🏆 大学院研究奨励賞
+      </a>
+
+      <span class="completion-label">
+        短縮修了
+      </span>
+
+      </div>
+
+    </li>
+
+
+    <!-- =================================================
+         博士前期課程
+         ================================================= -->
+
+    <li class="about-item">
+
+      <strong class="about-item-title">
+      東北大学 大学院工学研究科
+      航空宇宙工学専攻 博士前期課程
+      </strong>
+
+      <br>
+
+      <span class="item-meta">
+        2021年10月–2023年9月
+      </span>
+
+      <div class="item-detail">
+
+        <span class="item-label">
+          学位
+        </span>
+
+        修士（工学）
+
+      </div>
+
+      <div class="item-detail">
+
+        <span class="item-label">
+          指導教員
+        </span>
+
+        吉田 和哉 教授
+
+      </div>
+
+      <div class="item-detail">
+
+        <span class="item-label">
+          修士論文
+        </span>
+
+        <em>
+          Prediction of Driving Performance of Lunar Exploration
+          Rover Based on Traction Analysis
+        </em>
+
+      </div>
+
+      <div class="item-badges">
+
+      <a
+        href="img/awards/certificate_dean_award_2024.jpg"
+        class="award-label"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        🏆 工学研究科長賞
+      </a>
+
+      </div>
+
+    </li>
+
+
+    <!-- =================================================
+         学士課程
+         ================================================= -->
+
+    <li class="about-item">
+
+      <strong class="about-item-title">
+        東北大学 工学部
+      機械知能・航空工学科 
+      </strong>
+
+      <br>
+
+      <span class="item-meta">
+        2018年4月–2021年9月
+      </span>
+
+      <div class="item-detail">
+
+        <span class="item-label">
+          学位
+        </span>
+
+        学士（工学）
+
+      </div>
+
+      <div class="item-detail">
+
+        <span class="item-label">
+          指導教員
+        </span>
+
+        吉田 和哉 教授
+
+      </div>
+
+      <div class="item-detail">
+
+        <span class="item-label">
+          卒業論文
+        </span>
+
+        <em>
+          高速走行する月面探査ローバーの走行力学性能評価
+        </em>
+
+      </div>
+
+      <div class="item-badges">
+
+      <span class="completion-label">
+        早期卒業
+      </span>
+
+      </div>
+
+    </li>
+
+  </ul>
+
+</section>
+
+
+
+
+<!-- ===================================================
+     Honors & Awards
+     =================================================== -->
+
+<section class="page-section">
+
+  <h2 class="section-title">
+    受賞歴
+  </h2>
+
+  <ol class="publication-list">
+
+
+  <li>
+    <strong>東北大学総長賞</strong><br>
+    <span class="item-meta">
+      2026年3月｜東北大学
+    </span><br>
+      博士後期課程における優れた研究業績および学術・社会貢献が評価され，授与された．
+  </li>
+
+  <li>
+    <strong>大学院研究奨励賞</strong><br>
+    <span class="item-meta">
+      2026年2月｜自動車技術会
+    </span><br>
+      博士後期課程における優れた研究成果が評価され，授与された．
+  </li>
+  
+  <li>
+    <strong>優秀発表奨励賞</strong><br>
+    <span class="item-meta">
+      2025年7月｜計測自動制御学会東北支部
+    </span><br>
+      研究発表「惑星探査ローバーの砂地走行における動的挙動を考慮した車輪力学計測」が高く評価され，授与された．
+  </li>
+
+  <li>
+    <strong>東北大学工学研究科長賞</strong><br>
+    <span class="item-meta">
+      2024年3月｜東北大学
+    </span><br>
+      博士前期課程における優れた学業成績および研究成果が評価され，授与された．
+  </li>
+
+  </ol>
+
+</section>
+
+
+
+
+    <!-- ===================================================
+         Research Funding
+         =================================================== -->
+
+    <section class="page-section">
+
+      <h2 class="section-title">
+        科研費・研究助成等
+      </h2>
+
+      <ol class="publication-list">
+
+
+      <li>
+        <strong>
+          科学研究費助成事業 研究活動スタート支援
+        </strong>
+        
+      <span class="status-label collaboration-status">
+        進行中
+      </span>
+        
+        <br>
+        Coming Soon
+      </a><br>
+
+        日本学術振興会<br>
+
+        <span class="item-meta">
+          2026年8月–2028年3月
+        </span>
+
+        <!-- KAKEN公開後に課題名を追加 -->
+      </li>
+
+
+    <li>
+      <strong>
+        科学研究費助成事業 特別研究員奨励費
+      </strong><br>
+
+      <a
+        href="https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-24KJ0413/"
+        class="publication-title"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        車輪牽引性能にもとづく動力学的テラメカニクス理論の新構築
+      </a><br>
+
+       日本学術振興会<br>
+      <span class="item-meta">
+        2024年4月–2026年7月
+      </span>
+    </li>
+
+  <li>
+  <strong>
+    東北大学 機械科学技術国際共同大学院プログラム（GP-Mech）海外渡航助成
+  </strong><br>
+
+  東北大学<br>
+
+  <span class="item-meta">
+    2025年3月–2025年6月
+  </span>
+
+  </li>
+
+
+    <li>
+  <strong>
+    Mitacs Globalink Research Award
+  </strong><br>
+
+  Mitacs, Canada<br>
+
+  <span class="item-meta">
+    2025年3月–2025年6月
+  </span>
+
+  </li>
+
+  <li>
+  <strong>
+    東北大学 次世代研究者挑戦的研究プログラム 研究助成
+  </strong><br>
+
+  東北大学<br>
+
+  <span class="item-meta">
+    2023年10月–2024年3月
+  </span>
+
+  </li>
+
+  <li>
+  <strong>
+    東北大学 機械科学技術国際共同大学院プログラム（GP-Mech）海外渡航助成
+  </strong><br>
+
+  東北大学<br>
+
+  <span class="item-meta">
+    2023年4月–2023年5月
+  </span>
+
+  </li>
+  </ol>
+    </section>
+
+
+<!-- ===================================================
+     Academic & Professional Service
+     =================================================== -->
+
+<section class="page-section">
+
+  <h2 class="section-title">
+    学術・学会活動
+  </h2>
+
+  <!-- ===================================================
+       Society Service
+       =================================================== -->
+
+<h3 class="service-subtitle">
+  委員歴
+</h3>
+
+<ul>
+
+
+      <li>
+      計測自動制御学会 東北支部
+      <strong>広報幹事</strong><br>
+      <span class="item-meta">2026年1月–現在</span>
+    </li>
+
+</ul>
+
+
+<h3 class="service-subtitle">
+  企画セッション
+</h3>
+
+<ul class="session-organization-list">
+
+  <!-- =================================================
+       SII 2027
+       ================================================= -->
+
+  <li class="session-organization-item">
+
+    <div class="session-heading">
+
+      <a
+        href="https://sii2027.sice-si.org/"
+        class="publication-title session-conference"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        IEEE/SICE International Symposium on System Integration
+        (SII 2027)
+      </a>
+
+    </div>
+
+    <div class="session-date">
+      January 11–14, 2027 · Kobe, Japan
+    </div>
+
+    <div class="session-detail">
+
+      <span class="service-label">
+        Special Session
+      </span>
+
+      <span>
+        Intelligent Space Robotics for Future Space Exploration
+        and On-Orbit Servicing
+      </span>
+
+    </div>
+
+    <div class="session-detail">
+
+      <span class="service-label">
+        Role
+      </span>
+
+      <span>
+        Principal Organizer
+      </span>
+
+    </div>
+
+    <div class="session-detail">
+
+      <span class="service-label">
+        Co-Organizers
+      </span>
+
+      <span>
+        Toshinori Kuwahara (Tohoku University),
+        Hiroki Nakanishi (Institute of Science Tokyo)
+      </span>
+
+    </div>
+
+  </li>
+
+
+  <!-- =================================================
+       第70回宇宙科学技術連合講演会
+       ================================================= -->
+
+  <li class="session-organization-item">
+
+    <div class="session-heading">
+
+      <a
+        href="https://smartconf.jp/content/sstc70/"
+        class="publication-title session-conference"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        第70回宇宙科学技術連合講演会
+      </a>
+
+    </div>
+
+    <div class="session-date">
+      2026年11月10日～13日 · ライトキューブ宇都宮
+    </div>
+
+    <div class="session-detail">
+
+      <span class="service-label">
+        企画セッション
+      </span>
+
+      <span>
+        軌道上サービスに向けた非協力衛星に対する
+        近傍運用・捕獲技術と地上検証
+      </span>
+
+    </div>
+
+    <div class="session-detail">
+
+      <span class="service-label">
+        役割
+      </span>
+
+      <span>
+        オーガナイザー
+      </span>
+
+    </div>
+
+    <div class="session-detail">
+
+      <span class="service-label">
+        共同オーガナイザー
+      </span>
+
+      <span>
+        中西 洋喜（東京科学大学，代表），
+        桒原 聡文（東北大学）
+      </span>
+
+    </div>
+
+  </li>
+
+</ul>
+
+
+<h3 class="service-subtitle">
+  座長・審査員
+</h3>
+
+<ul>
+
+  <li>
+
+    <strong>
+      座長
+    </strong>
+
+    <ul>
+
+        <li>計測自動制御学会東北支部 第355回研究集会（2025）</li>
+
     </ul>
-  </section>
 
-  <section class="mb-8">
-    <h3 class="text-xl font-semibold mb-3">学歴</h3>
-    <ul class="space-y-4 list-disc pl-5">
-      <li><b>2023年10月–2025年09月 — 東北大学 大学院工学研究科 航空宇宙工学専攻 博士課程後期3年 (博士) の課程</b>
-        <ul class="list-disc pl-5 mt-2 space-y-1">
-          <li>指導教員：吉田和哉 教授</li>
-          <li>博士論文：Terramechanics-Based Traction Analysis of High-Speed Mobility for Lunar Rovers</li>
-          <!-- ここにコメントとして残したい内容 <li><span class="font-bold text-yellow-800">2.0年（/3.0年）短期修了</span></li> -->
-           <li><span class="font-bold text-yellow-800">2.0年（/3.0年）短期修了</span></li>
-          <li><span class="font-bold text-yellow-800">Globalink Research Award (優秀カナダ留学生表彰)</span></li>
-        </ul>
-      </li>
+  </li>
 
-      <li><b>2021年10月–2023年09月 — 東北大学 大学院工学研究科 航空宇宙工学専攻 博士課程前期2年 (修士) の課程</b>
-        <ul class="list-disc pl-5 mt-2 space-y-1">
-          <li>指導教員：吉田和哉 教授</li>
-          <li>修士論文：Prediction of Driving Performance of Lunar Exploration Rover Based on Traction Analysis</li>
-          <li><span class="font-bold text-yellow-800">工学研究科長賞（優秀修士学生賞）</span></li>
-        </ul>
-      </li>
+  <li>
 
-      <li><b>2018年04月–2021年09月 — 東北大学 工学部 機械知能・航空工学科</b>
-        <ul class="list-disc pl-5 mt-2 space-y-1">
-          <li>指導教員：吉田和哉 教授</li>
-          <li>卒業論文：高速走行する月面探査ローバーの走行力学性能評価</li>
-          <li><span class="font-bold text-yellow-800">3.5年（/4.0年）早期卒業</span></li>
-        </ul>
-      </li>
+    <strong>
+      審査員
+    </strong>
+
+    <ul>
+        <li>計測自動制御学会東北支部 第359回研究集会（2026）</li>
+        <li>ロボティクス・メカトロニクス講演会2026（2026）</li>
+        <li>計測自動制御学会東北支部 第357回研究集会（2026）</li>
+        <li>計測自動制御学会東北支部 第355回研究集会（2025）</li>
+      <li>計測自動制御学会東北支部 第354回研究集会（2025）</li>
+
+
     </ul>
-  </section>
 
-  <section class="mb-8">
-    <h3 class="text-xl font-semibold mb-3">受賞歴</h3>
-    <ol class="list-decimal pl-5 space-y-1">
-      <li>2025年07月 — <strong>優秀発表奨励賞</strong>, 計測自動制御学会東北支部 </li>
-      <li>2024年03月 — <strong>工学研究科長賞</strong>, 東北大学  </li>
-      <li>2023年11月 — <strong>Best Paper Award</strong>, The 16th European-African Regional Conference of the ISTVS  </li>
-    </ol>
-  </section>
+  </li>
+
+</ul>
 
 
-<section class="mb-8">
-    <h3 class="text-xl font-semibold mb-3">競争的資金</h3>
-    <ol class="list-decimal pl-5 space-y-1">
-      <li>2024年04月–2027年03月 — 日本学術振興会 科学研究費助成事業（科研費） 特別研究員奨励費</li>   
-          <ul class="list-disc pl-5 mt-2 space-y-1">
-          <li>課題名："<a href="https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-24KJ0413/" class="underline font-bold" target="_blank"><b>車輪牽引性能にもとづく動力学的テラメカニクス理論の新構築</b></a>"</li>
-        </ul>   
-    </ol>
-  </section>
+<h3 class="service-subtitle">
+  査読歴
+</h3>
 
+<ul>
 
+  <li>
 
-  <section class="mb-8">
-    <h3 class="text-xl font-semibold mb-3">奨学金</h3>
-    <ol class="list-decimal pl-5 space-y-1">
-      <!-- ここにコメントとして残したい内容 <li>2025年10月–2027年03月 — 独立行政法人 日本学術振興会 特別研究員PD 研究奨励金 </li> -->
-      <li>2025年10月–2027年03月 — 独立行政法人 日本学術振興会 特別研究員PD 研究奨励金 </li>
-      <li>2024年04月–2025年09月 — 独立行政法人 日本学術振興会 特別研究員DC1 研究奨励金 </li>
-      <li>2023年10月–2024年03月 — 東北大学 次世代研究者挑戦的研究プログラム 研究奨励費 </li>
-      <li>2022年10月–2023年09月 — 東北大学 機械科学技術国際共同大学院プログラム (GP-Mech) RA雇用費 </li>      
-    </ol>
-  </section>
+    <strong>
+      学術誌
+    </strong>
 
-  <section class="mb-8">
-    <h3 class="text-xl font-semibold mb-3">研究助成</h3>
-    <ol class="list-decimal pl-5 space-y-1">
-      <li>2025年03月–2025年06月 — Mitacs (Canada), Globalink Research Award</li> 
-      <li>2025年03月–2025年06月 — 東北大学 機械科学技術国際共同大学院プログラム (GP-Mech) 留学助成費 </li>   
-      <li>2023年10月–2024年03月 — 東北大学 次世代研究者挑戦的研究プログラム 研究費 </li>
-      <li>2023年04月–2023年05月 — 東北大学 機械科学技術国際共同大学院プログラム (GP-Mech) 留学助成費 </li>      
-    </ol>
-  </section>
+    <ul>
 
-
-
-  <section class="mb-8">
-    <h3 class="text-xl font-semibold mb-3">講義歴</h3>
-    <ol class="list-decimal pl-5 space-y-1">
-      <li>Tohoku University Engineering Summer Program (TESP 2024)</li>
-        <ul class="list-disc pl-5 mt-2 space-y-1">
-          <li>機関：東北大学大学院工学研究科</li>
-          <li>期間：2024年07月–2024年08月</li>
-          <li>職位：アドミニストレイティブアシスタント</li>
-        </ul>   
-    </ol>
-  </section>
-
-  <section class="mb-8">
-    <h3 class="text-xl font-semibold mb-3">委員会活動</h3>
-    <ol class="list-decimal pl-5 space-y-1">
-      <li>東北大学 機械系同窓会 理事 (2024年4月～) </li>
-      <li>東北大学 機械系院生会代表 (2024年04月–2025年03月) </li>
-      <li>東北大学 機械系代表学生会員 (2022年04月–2023年03月) </li>
-    </ol>
-  </section>
-
-
-  <section class="mb-8">
-    <h3 class="text-xl font-semibold mb-3">査読歴</h3>
-    <ol class="list-decimal pl-5 space-y-1">
-      <li>International Conference on Space Robotics (iSpaRo2025)</li>
+      <li>Journal of Terramechanics</li>
+      <li>Advances in Space Research</li>
+      <li>Mechanical Systems and Signal Processing</li>
+      <li>IEEE Robotics and Automation Letters</li>
+      <li>Results in Engineering</li>
       <li>Acta Astronautica</li>
       <li>The Planetary Science Journal</li>
-      <li>International Society for Terrain-Vehicle Systems (ISTVS2024)</li>
-    </ol>
-  </section>
 
-  
+    </ul>
 
-  <section class="mb-8">
-    <h3 class="text-xl font-semibold mb-3">共同研究先</h3>
-    <ol class="list-decimal pl-5 space-y-1">
-      <li>トヨタ自動車株式会社</li>
-      <li>株式会社ispace</li>
-      <li>株式会社amulapo</li>
-    </ol>
-  </section>
+  </li>
 
-  <section>
-    <h3 class="text-xl font-semibold mb-3">所属学会</h3>
-    <ol class="list-decimal pl-5 space-y-1">
-      <li>日本機械学会 </li>
-      <li>日本航空宇宙学会</li>
-      <li>計測自動制御学会 </li>
-    </ol>
-  </section>
-</main>
-  
+  <li>
+
+    <strong>
+      国際会議
+    </strong>
+
+    <ul>
+
+      <li>
+        International Conference on Space Robotics (iSpaRo) 2026
+      </li>
+
+      <li>
+        International Conference on Space Robotics (iSpaRo) 2025
+      </li>
+
+      <li>
+        International Society for Terrain-Vehicle Systems (ISTVS) 2024
+      </li>
+
+    </ul>
+
+  </li>
+  </ul>
+
+    <h3 class="service-subtitle">
+  学内・コミュニティ活動
+</h3>
+
+      <ul>
+        <li>
+          東北大学 機械系同窓会 理事
+          （2024年4月–現在）
+        </li>
+
+        <li>
+          東北大学 機械系院生会 代表
+          （2024年4月–2025年3月）
+        </li>
+
+        <li>
+          東北大学 機械系代表学生会員
+          （2022年4月–2023年3月）
+        </li>
+
+</ul>
+    </section>
 
 
+    <!-- ===================================================
+         Teaching Experience
+         =================================================== -->
 
-<footer class="border-t border-gray-200 dark:border-neutral-800 py-8 mt-4">
-  <div class="max-w-5xl mx-auto px-4 text-sm text-gray-600 dark:text-neutral-400 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-    <div>© 2025 Keisuke Takehana. All rights reserved.</div>
-    <div class="flex gap-4 no-print">
-      <a class="underline" href="contact.html">Contact</a>
-      <button class="underline" onclick="window.print()">印刷 / PDF保存</button>
+  <section class="page-section">
+
+  <h2 class="section-title">
+    教育・研究指導歴
+  </h2>
+
+  <ol class="publication-list">
+
+    <li>
+      <strong>機械知能・航空工学研修Ⅱ</strong>
+
+      <span class="status-label collaboration-status">
+        指導中
+      </span>
+
+      <br>
+
+      東北大学 工学部<br>
+
+      <span class="item-meta">
+        2026年7月–現在
+      </span>
+    </li>
+
+    <li>
+      <strong>航空宇宙工学修士研修</strong>
+
+      <span class="status-label collaboration-status">
+        指導中
+      </span>
+
+      <br>
+
+      東北大学 大学院工学研究科<br>
+
+      <span class="item-meta">
+        2026年4月–現在
+      </span>
+    </li>
+
+    <li>
+      <strong>卒業研究</strong>
+
+      <span class="status-label collaboration-status">
+        指導中
+      </span>
+
+      <br>
+
+      東北大学 工学部<br>
+
+      <span class="item-meta">
+        2026年4月–現在
+      </span>
+    </li>
+
+    <li>
+      <strong>
+        Tohoku University Engineering Summer Program（TESP 2024）
+      </strong><br>
+
+      東北大学 大学院工学研究科<br>
+      担当：アドミニストレイティブアシスタント<br>
+
+      <span class="item-meta">
+        2024年7月–2024年8月
+      </span>
+    </li>
+
+  </ol>
+
+</section>
+
+
+    <!-- ===================================================
+         Research Collaborations
+         =================================================== -->
+
+    <section class="page-section">
+
+      <h2 class="section-title">
+        共同研究
+      </h2>
+
+      <ul>
+        <li>
+      東京科学大学
+      <span class="status-label collaboration-status">
+        進行中
+      </span>
+    </li>
+        <li>
+          Concordia University，
+          Aerospace Robotics Laboratory
+        </li>
+
+        <li>
+          German Aerospace Center（DLR），
+          Institute of System Dynamics and Control
+        </li>
+
+        <li>トヨタ自動車株式会社</li>
+
+        <li>株式会社ispace</li>
+
+        <li>株式会社amulapo</li>
+      </ul>
+
+    </section>
+
+
+    <!-- ===================================================
+         Professional Memberships
+         =================================================== -->
+
+    <section class="page-section">
+
+      <h2 class="section-title">
+        所属学会
+      </h2>
+
+      <ul>
+        <li>日本機械学会</li>
+        <li>日本航空宇宙学会</li>
+        <li>計測自動制御学会</li>
+      </ul>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+       Footer
+       ===================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="site-footer-inner">
+
+      <div>
+        © 2026 Keisuke Takehana. All rights reserved.
+      </div>
+
+      <div class="footer-links no-print">
+
+        <a href="contact.html">
+          Contact
+        </a>
+
+        <button
+          type="button"
+          onclick="window.print()"
+        >
+          印刷 / PDF保存
+        </button>
+
+      </div>
+
     </div>
-  </div>
-</footer>
-<script>
-  const menuBtn = document.getElementById('menuBtn');
-  const mobileNav = document.getElementById('mobileNav');
-  if (menuBtn && mobileNav) { menuBtn.addEventListener('click', () => {
-    const open = mobileNav.classList.toggle('hidden') === false;
-    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });}
-  const themeBtn = document.getElementById('themeBtn');
-  const root = document.documentElement;
-  if (themeBtn) { 
-    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (prefersDark) root.classList.add('dark');
-    themeBtn.textContent = root.classList.contains('dark') ? 'ライト モード' : 'ダーク モード';
-    themeBtn.addEventListener('click', () => {
-      root.classList.toggle('dark');
-      themeBtn.textContent = root.classList.contains('dark') ? 'ライト モード' : 'ダーク モード';
-    });
-  }
-</script>
-<style>:root{scroll-padding-top:80px} body{padding-top:72px}</style>
+
+  </footer>
+
+  <script src="script.js"></script>
 
 </body>
+
 </html>
